@@ -6,8 +6,10 @@ export default {
   ],
   theme: {
     extend: {},
-    colors: {
-      ghostWhite: '#f4f2f3',
+    fontFamily: {
+      poppins: ["Poppins", 'sans-serif'],
+      roboto: ['Roboto', 'sans-serif'],
+      rubik: ['Rubik Doodle Shadow', 'sans-serif']
     },
   },
   plugins: [],
