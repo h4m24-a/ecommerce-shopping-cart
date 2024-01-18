@@ -14,7 +14,7 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="bg-gray-950">
+    <Disclosure as="nav" className="">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 py-4">
@@ -46,7 +46,7 @@ export default function Example() {
                       key={item.name}
                       href={item.href}
                       className={classNames(
-                        item.current ? 'bg-gray-900 text-white' : 'text-white hover:bg-gray-900 hover:text-white',
+                        item.current ? 'bg-gray-900 text-white' : 'text-black hover:bg-gray-900 hover:text-white',
                         'rounded-md px-3 py-2 text-sm uppercase font-bold'
                       )}
                       aria-current={item.current ? 'page' : undefined}
@@ -68,7 +68,7 @@ export default function Example() {
                 </button>
                 <button
                   type="button"
-                  className="relative rounded-full bg-black p-2 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="relative rounded-full bg-black p-2 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Profile</span>
