@@ -12,7 +12,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function NavBar() {
   return (
     <Disclosure as="nav" className="">
       {({ open }) => (
@@ -40,7 +40,7 @@ export default function Example() {
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-10">
+                  <div className="flex space-x-8">
                     {navigation.map((item) => (
                       <a
                       key={item.name}

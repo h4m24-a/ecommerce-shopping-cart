@@ -9,9 +9,10 @@ export default {
     fontFamily: {
       poppins: ["Poppins", 'sans-serif'],
       roboto: ['Roboto', 'sans-serif'],
-      rubik: ['Rubik Doodle Shadow', 'sans-serif'],
       montserrat: ['Montserrat, sans-serif']
     },
   },
-  plugins: [],
+  plugins: [
+    require('@headlessui/tailwindcss')
+  ],
 }
