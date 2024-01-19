@@ -14,7 +14,7 @@ const TwoImage = () => {
       <div className="relative ">
         <img
           className="object-cover rounded-lg h-full cursor-pointer  w-full"
-          src="assets\enchant-image-2.jpeg"
+          src="../assets\enchant-image-2.jpeg"
           alt="streetwear"
         />
         <p className="absolute font-montserrat bottom-0 left-0 p-3 font-extrabold text-2xl uppercase text-white bg-black bg-opacity-10">

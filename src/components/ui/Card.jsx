@@ -2,27 +2,29 @@ import PropTypes from "prop-types";
 
 const Card = ({ imageSrc, name, description, price }) => {
   return (
-    <div className="relative bg-gray-100 p-6 overflow-hidden">
-      {/* Full-width image with object-cover fit */}
-      <div className="aspect-w-16 aspect-h-9">
-        <img
-          src={imageSrc}
-          alt={name}
-          className="object-cover w-full h-full"
-        />
-      </div>
+    <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col bg-white">
+        {/* Full-width image with object-cover fit */}
+        <div className="flex- ">
+            <img
+            src={imageSrc}
+            alt={name}
+            className="object-cover w-full h-full rounded-md"
+            />
+        </div>
 
-      {/* Text content */}
-      <div className="mt-4">
-        {/* Name */}
-        <h2 className="text-xl font-semibold">{name}</h2>
+        {/* Text content */}
+        <div className="mt-4">
+            {/* Name */}
+            <h2 className="text-xl font-montserrat uppercase font-bold">{name}</h2>
 
-        {/* Description */}
-        <p className="text-black mt-2">{description}</p>
+            {/* Description */}
+            <p className="text-black font-montserrat uppercase font-bold mt-2">{description}</p>
 
-        {/* Price */}
-        <p className="text-black font-bold mt-2">${price}</p>
-      </div>
+            {/* Price */}
+            <p className="text-black font-montserrat uppercase font-bold mt-2">${price}</p>
+        </div>
+        </div>
     </div>
   );
 };
