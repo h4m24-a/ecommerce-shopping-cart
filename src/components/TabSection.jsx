@@ -35,7 +35,7 @@ function TabSection() {
             <Card name={"Women's Fashion"} imageSrc="../assets/tshirts/tshirt-5.jpeg" description="Purple Tee." price="49.99"/>
             <Card name={"Women's Fashion"} imageSrc="../assets/tshirts/tshirt-6.jpeg" description="White Tee." price="49.99"/>
             <Card name={"Women's Fashion"} imageSrc="../assets/tshirts/tshirt-7.jpeg" description="Black Tee." price="49.99"/>
-            <Card name={"Women's Fashion"} imageSrc="../assets/tshirts/tshirt-6.jpeg" description="White Tee." price="49.99"/>
+            <Card name={"Women's Fashion"} imageSrc="../assets/tshirts/tshirt-8.jpeg" description="White Tee." price="49.99"/>
           </Tab.Panel>
 
           <Tab.Panel className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -43,6 +43,7 @@ function TabSection() {
           <Card name={"Men's Fashion"} imageSrc="../assets/hoodies/hoodie-2.jpeg" description="Black Hoodie." price="49.99"/>
           <Card name={"Women's Fashion"} imageSrc="../assets/hoodies/hoodie-3.jpeg" description="Green Hoodie." price="49.99"/>
           <Card name={"Men's Fashion"} imageSrc="../assets/hoodies/hoodie-4.jpeg" description="Cream Hoodie." price="49.99"/>
+
           </Tab.Panel>
           <Tab.Panel className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" >
           <Card name={"Men's Fashion"} imageSrc="../assets/sweatshirts/sweatshirt-1.jpeg" description="Blue Sweatshirt." price="49.99"/>
@@ -50,8 +51,20 @@ function TabSection() {
           <Card name={"Men's Fashion"} imageSrc="../assets/sweatshirts/sweatshirt-3.jpeg" description="Cream Sweatshirt." price="49.99"/>
           <Card name={"Men's Fashion"} imageSrc="../assets/sweatshirts/sweatshirt-4.jpeg" description="Red Sweatshirt." price="49.99"/>
           </Tab.Panel>
-          <Tab.Panel>Content 4</Tab.Panel>
-          <Tab.Panel>Content 5</Tab.Panel>
+
+          <Tab.Panel className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" >
+          <Card name={"Women's Fashion"} imageSrc="../assets/jackets/jacket-1.jpeg" description="Yellow Jacket." price="49.99"/>
+          <Card name={"Women's Fashion"} imageSrc="../assets/jackets/jacket-2.jpeg" description="Orange jacket." price="49.99"/>
+          <Card name={"Men's Fashion"} imageSrc="../assets/jackets/jacket-3.jpeg" description="Orange Jacket." price="49.99"/>
+          <Card name={"Men's Fashion"} imageSrc="../assets/jackets/jacket-4.jpeg" description="checkered Jacket." price="49.99"/>
+          </Tab.Panel>
+
+          <Tab.Panel className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" >
+          <Card name={"Women's Fashion"} imageSrc="../assets/sneakers/sneaker-1.jpeg" description="White Sneakers." price="49.99"/>
+          <Card name={"Women's Fashion"} imageSrc="../assets/sneakers/sneaker-2.jpeg" description="Black Sneakers." price="49.99"/>
+          <Card name={"Men's Fashion"} imageSrc="../assets/sneakers/sneaker-3.jpeg" description="Grey Sneakers." price="49.99"/>
+          <Card name={"Men's Fashion"} imageSrc="../assets/sneakers/sneaker-4.jpeg" description="Red Sneakers." price="49.99"/>
+          </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>
     </div>
