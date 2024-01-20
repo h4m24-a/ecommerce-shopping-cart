@@ -47,7 +47,7 @@ export default function NavBar() {
                       href={item.href}
                       className={classNames(
                         item.current ? 'bg-gray-900 text-white' : 'text-black hover:bg-gray-900 hover:text-white',
-                        'rounded-md px-3 py-2 text-sm uppercase font-bold'
+                        'rounded-md px-3 py-2 text-sm uppercase font-sora font-bold'
                       )}
                       aria-current={item.current ? 'page' : undefined}
                     >
@@ -60,7 +60,7 @@ export default function NavBar() {
               <div className="absolute inset-y-0 right-0 flex items-center gap-6 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
                   type="button"
-                  className="relative rounded-full bg-black p-2 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="relative rounded-full  p-2 text-black  focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Cart</span>
@@ -68,7 +68,7 @@ export default function NavBar() {
                 </button>
                 <button
                   type="button"
-                  className="relative rounded-full bg-black p-2 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="relative rounded-full  p-2 text-black  focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Profile</span>

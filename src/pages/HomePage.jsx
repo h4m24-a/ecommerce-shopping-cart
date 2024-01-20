@@ -5,7 +5,7 @@ import TabSection from "../components/TabSection"
 
 const HomePage = () => {
   return (
-    <div className="max-w-8xl mx-auto">
+    <div className="max-w-8xl mx-auto bg-slate-50">
         <Navbar />
         <Hero />
         <TwoImage />

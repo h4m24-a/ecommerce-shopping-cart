@@ -9,7 +9,7 @@ const Card = ({ imageSrc, name, description, price }) => {
             <img
             src={imageSrc}
             alt={name}
-            className="object-cover w-full h-full rounded-md"
+            className="object-cover w-full h-full rounded-lg cursor-pointer"
             />
         </div>
 
