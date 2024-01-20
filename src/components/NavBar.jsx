@@ -1,5 +1,5 @@
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon, ShoppingCartIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, UserCircleIcon, XMarkIcon, ShoppingCartIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Home', href: '#', current: true },
@@ -64,7 +64,7 @@ export default function NavBar() {
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Cart</span>
-                  <ShoppingCartIcon className="h-8 w-8" aria-hidden="true" />
+                  <ShoppingCartIcon className="h-10 w-10" aria-hidden="true" />
                 </button>
                 <button
                   type="button"
@@ -72,7 +72,7 @@ export default function NavBar() {
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Profile</span>
-                  <BellIcon className="h-8 w-8" aria-hidden="true" />
+                  <UserCircleIcon className="h-10 w-10" aria-hidden="true" />
                 </button>
               </div>
             </div>
