@@ -10,7 +10,6 @@ export default {
       poppins: ["Poppins", 'sans-serif'],
       montserrat: ['Montserrat, sans-serif'],
       sora: ['Sora, sans-serif'],
-      belleza: ['Belleza, sans-serif'],
     },
   },
   plugins: [

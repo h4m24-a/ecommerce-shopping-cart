@@ -27,7 +27,7 @@ function TabSection() {
           </Tab>
         </Tab.List>
         <Tab.Panels>
-          <Tab.Panel className="mt-14 gap-5 flex flex-col md:flex-row">
+          <Tab.Panel className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           <Card
               name={"Men's Fashion"}
               imageSrc="../assets/tshirts/tshirt-1.jpg"
@@ -49,6 +49,30 @@ function TabSection() {
             <Card
               name={"Men's Fashion"}
               imageSrc="../assets/tshirts/tshirt-4.jpg"
+              description="White Tee with print."
+              price="49.99"
+            />
+             <Card
+              name={"Men's Fashion"}
+              imageSrc="../assets/tshirts/tshirt-4.jpg"
+              description="Black Tee with print."
+              price="49.99"
+            />
+            <Card
+              name={"Men's Fashion"}
+              imageSrc="../assets/tshirts/tshirt-3.jpg"
+              description="White Tee with print."
+              price="49.99"
+            />
+            <Card
+              name={"Men's Fashion"}
+              imageSrc="../assets/tshirts/tshirt-2.jpg"
+              description="White Tee with print."
+              price="49.99"
+            />
+            <Card
+              name={"Men's Fashion"}
+              imageSrc="../assets/tshirts/tshirt-1.jpg"
               description="White Tee with print."
               price="49.99"
             />
