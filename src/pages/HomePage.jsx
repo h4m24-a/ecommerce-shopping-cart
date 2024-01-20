@@ -2,6 +2,7 @@ import Navbar from "../components/NavBar"
 import Hero from "../components/Hero"
 import TwoImage from "../components/TwoImage"
 import TabSection from "../components/TabSection"
+import Bordered from "../components/ui/Bordered"
 
 const HomePage = () => {
   return (
@@ -10,6 +11,7 @@ const HomePage = () => {
         <Hero />
         <TwoImage />
         <TabSection />
+        <Bordered />
     </div>
   )
 }
