@@ -3,7 +3,7 @@ import Card from "./ui/Card";
 
 function TabSection() {
   return (
-    <div className="flex flex-col justify-center items-center mt-12">
+    <div className="flex flex-col justify-center items-center mt-24">
       <h1 className="text-center font-montserrat uppercase mx-auto font-semibold leading-loose max-w-6xl text-2xl md:text-5l lg:text-8xl ">
         Choose your best <span className="text-emerald-700">everyday</span>{" "}
         outfit.
@@ -55,7 +55,7 @@ function TabSection() {
           <Tab.Panel className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" >
           <Card name={"Women's Fashion"} imageSrc="../assets/jackets/jacket-1.jpeg" description="Yellow Jacket." price="49.99"/>
           <Card name={"Women's Fashion"} imageSrc="../assets/jackets/jacket-2.jpeg" description="Orange jacket." price="49.99"/>
-          <Card name={"Men's Fashion"} imageSrc="../assets/jackets/jacket-3.jpeg" description="Orange Jacket." price="49.99"/>
+          <Card name={"Men's Fashion"} imageSrc="../assets/jackets/jacket-3.jpeg" description="Puffer Jacket." price="49.99"/>
           <Card name={"Men's Fashion"} imageSrc="../assets/jackets/jacket-4.jpeg" description="checkered Jacket." price="49.99"/>
           </Tab.Panel>
 

@@ -1,23 +1,23 @@
 const TwoImage = () => {
   return (
-    <div className="mt-10 flex flex-col  justify-center gap-6 p-3 max-w-full md:flex-row">
-      <div className="relative h-full">
+    <div className="mt-10 flex flex-col justify-center gap-1 p-5 max-w-full md:flex-row">
+      <div className="relative">
         <img
-          className="object-cover rounded-lg h-full cursor-pointer  w-full"
-          src="assets\enchant-image-1.jpg"
+          className="object-cover rounded-sm h-full cursor-pointer  w-full"
+          src="https://img.freepik.com/free-vector/fashion-models-with-urban-outfit_79603-524.jpg?size=626&ext=jpg&ga=GA1.1.316288856.1705851322&semt=ais"
           alt="streetwear"
         />
-        <p className="absolute font-montserrat bottom-0 left-0 p-3 font-extrabold text-2xl uppercase text-white bg-black bg-opacity-5">
+        <p className="relative text-right  font-montserrat bottom-0 left-0 p-3 font-extrabold text-2xl uppercase text-white bg-black ">
           Outfit of the day
         </p>
       </div>
       <div className="relative ">
         <img
-          className="object-cover rounded-lg h-full cursor-pointer  w-full"
-          src="../assets\enchant-image-2.jpeg"
+          className="object-cover rounded-sm h-full cursor-pointer  w-full"
+          src="https://img.freepik.com/free-vector/fashion-model-with-casual-outfit_79603-526.jpg?size=626&ext=jpg&ga=GA1.1.316288856.1705851322&semt=ais"
           alt="streetwear"
         />
-        <p className="absolute font-montserrat bottom-0 left-0 p-3 font-extrabold text-2xl uppercase text-white bg-black bg-opacity-10">
+        <p className="relative  font-montserrat bottom-0 left-0 p-3 font-extrabold text-2xl uppercase text-white bg-black ">
           Outfit of the day
         </p>
       </div>
