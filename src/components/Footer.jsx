@@ -4,7 +4,7 @@ import Button from "../components/ui/Button";
 const Footer = () => {
   return (
     <footer className=" bg-gray-950 max-w-full ">
-      <div className="flex flex-col justify-between py-8 px-20 md:flex-row">
+      <div className="flex flex-col justify-between py-10 px-20 md:flex-row">
         <div className="flex flex-col gap-5">
           <p className="text-white text-2xl uppercase font-sora ">
             Enchant Streetwear
@@ -65,6 +65,14 @@ const Footer = () => {
             <li className="text-white font-sora text-sm">About</li>
             <li className="text-white font-sora text-sm">Product</li>
             <li className="text-white font-sora text-sm">Contact</li>
+            <li className="text-white font-sora text-sm">Refund Policy</li>
+          </ul>
+
+          <ul className="flex flex-col gap-5 cursor-pointer ">
+            <li className="text-white font-sora text-sm">Support</li>
+            <li className="text-white font-sora text-sm">Collections</li>
+            <li className="text-white font-sora text-sm">Latest Arrivals</li>
+            <li className="text-white font-sora text-sm">Privacy</li>
           </ul>
 
           <div className="flex flex-col gap-3">
