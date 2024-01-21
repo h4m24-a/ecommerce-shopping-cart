@@ -1,4 +1,3 @@
-import React from "react";
 import Button from "../components/ui/Button";
 
 const Footer = () => {
@@ -84,7 +83,7 @@ const Footer = () => {
               <p className="text-white font-sora text-sm">Get the App</p>
               <Button
                 text="Download App"
-                btnClass="text-whitetext-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-sm text-sm px-10 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                btnClass="text-whitetext-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-sm text-sm px-10 py-2.5 me-2 mb-2"
               />;
             </div>
           </div>
