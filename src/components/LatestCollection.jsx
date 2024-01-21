@@ -13,8 +13,8 @@ const LatestCollection = () => {
           <li>
             <a href="#" className="group relative block">
               <img
-                src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGZhc2hpb24lMjBzbmVha2Vyc3xlbnwwfDB8MHx8fDI%3D"
-                alt=""
+                src="https://images.unsplash.com/photo-1518362165686-c587a1de1003?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="sneakers"
                 className="aspect-square w-full object-cover transition duration-500 group-hover:opacity-90"
               />
 
