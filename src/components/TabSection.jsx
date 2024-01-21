@@ -9,7 +9,7 @@ function TabSection() {
         outfit.
       </h1>
       <Tab.Group defaultIndex={0}>
-        <Tab.List className="mt-4 flex justify-center items-center flex-col sm:gap-0 md:flex-row md:gap-10 lg:gap-28">
+        <Tab.List className="mt-4 flex justify-center items-center flex-col sm:gap-0 lg:flex-row  lg:gap-28">
           <Tab className="ui-selected:bg-black ui-selected:text-white ui-not-selected:bg-white ui-not-selected:text-black mt-10 px-8 py-3  font-bold  font-sora uppercase text-md border-solid border border-black rounded-lg lg:text-xl">
             T Shirt
           </Tab>
