@@ -64,7 +64,7 @@ export default function NavBar() {
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Cart</span>
-                  <ShoppingCartIcon className="h-10 w-10" aria-hidden="true" />
+                  <ShoppingCartIcon className="h-7 w-7 md:h-10 md:w-10" aria-hidden="true" />
                 </button>
                 <button
                   type="button"
@@ -72,7 +72,7 @@ export default function NavBar() {
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Profile</span>
-                  <UserCircleIcon className="h-10 w-10" aria-hidden="true" />
+                  <UserCircleIcon className="h-7 w-7 md:h-10 md:w-10" aria-hidden="true" />
                 </button>
               </div>
             </div>
