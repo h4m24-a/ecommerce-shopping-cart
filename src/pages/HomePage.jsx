@@ -4,6 +4,7 @@ import TwoImage from "../components/TwoImage"
 import TabSection from "../components/TabSection"
 import Bordered from "../components/ui/Bordered"
 import LatestCollection from "../components/LatestCollection"
+import Footer from "../components/Footer"
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
         <TabSection />
         <Bordered />
         <LatestCollection />
+        <Footer />
     </div>
   )
 }
