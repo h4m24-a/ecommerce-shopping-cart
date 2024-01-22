@@ -5,7 +5,7 @@ const Card = ({ imageSrc, name, description, price }) => {
     <div className="flex flex-col md:flex-row">
         <div className="flex flex-col bg-white">
         {/* Full-width image with object-cover fit */}
-        <div className="flex- ">
+        <div className="flex ">
             <img
             src={imageSrc}
             alt={name}
@@ -22,7 +22,7 @@ const Card = ({ imageSrc, name, description, price }) => {
             <p className="text-black font-montserrat uppercase font-bold mt-2">{description}</p>
 
             {/* Price */}
-            <p className="text-black font-montserrat uppercase font-bold mt-2">${price}</p>
+            <p className="text-black font-montserrat uppercase font-bold mt-2">{price}</p>
         </div>
         </div>
     </div>
@@ -35,7 +35,7 @@ Card.propTypes = {
   description: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired
+  price: PropTypes.string
 };
 
 export default Card;

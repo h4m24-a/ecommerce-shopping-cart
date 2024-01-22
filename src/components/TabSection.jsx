@@ -1,5 +1,5 @@
 import { Tab } from "@headlessui/react";
-import Card from "./ui/Card";
+import Card from "../components/ui/Card";
 
 function TabSection() {
   return (
@@ -28,42 +28,42 @@ function TabSection() {
         </Tab.List>
         <Tab.Panels>
           <Tab.Panel className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            <Card name={"Men's Fashion"} imageSrc="../assets/tshirts/tshirt-1.jpg" description="Black Tee with print." price="49.99"/>
-            <Card name={"Men's Fashion"} imageSrc="../assets/tshirts/tshirt-2.jpg" description="White Tee with print." price="49.99"/>
-            <Card name={"Men's Fashion"} imageSrc="../assets/tshirts/tshirt-3.jpg" description="White Tee with print." price="49.99"/>
-            <Card name={"Men's Fashion"} imageSrc="../assets/tshirts/tshirt-4.jpg" description="White Tee with print." price="49.99"/>
-            <Card name={"Women's Fashion"} imageSrc="../assets/tshirts/tshirt-5.jpeg" description="Purple Tee." price="49.99"/>
-            <Card name={"Women's Fashion"} imageSrc="../assets/tshirts/tshirt-6.jpeg" description="White Tee." price="49.99"/>
-            <Card name={"Women's Fashion"} imageSrc="../assets/tshirts/tshirt-7.jpeg" description="Black Tee." price="49.99"/>
-            <Card name={"Women's Fashion"} imageSrc="../assets/tshirts/tshirt-8.jpeg" description="White Tee." price="49.99"/>
+            <Card name={"Men's Fashion"} imageSrc="../assets/tshirts/tshirt-1.jpg" description="Black Tee with print."/>
+            <Card name={"Men's Fashion"} imageSrc="../assets/tshirts/tshirt-2.jpg" description="White Tee with print."/>
+            <Card name={"Men's Fashion"} imageSrc="../assets/tshirts/tshirt-3.jpg" description="White Tee with print."/>
+            <Card name={"Men's Fashion"} imageSrc="../assets/tshirts/tshirt-4.jpg" description="White Tee with print."/>
+            <Card name={"Women's Fashion"} imageSrc="../assets/tshirts/tshirt-5.jpeg" description="Purple Tee."/>
+            <Card name={"Women's Fashion"} imageSrc="../assets/tshirts/tshirt-6.jpeg" description="White Tee."/>
+            <Card name={"Women's Fashion"} imageSrc="../assets/tshirts/tshirt-7.jpeg" description="Black Tee."/>
+            <Card name={"Women's Fashion"} imageSrc="../assets/tshirts/tshirt-8.jpeg" description="White Tee."/>
           </Tab.Panel>
 
           <Tab.Panel className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          <Card name={"Men's Fashion"} imageSrc="../assets/hoodies/hoodie-1.jpeg" description="Cream Hoodie." price="49.99"/>
-          <Card name={"Men's Fashion"} imageSrc="../assets/hoodies/hoodie-2.jpeg" description="Black Hoodie." price="49.99"/>
-          <Card name={"Women's Fashion"} imageSrc="../assets/hoodies/hoodie-3.jpeg" description="Green Hoodie." price="49.99"/>
-          <Card name={"Men's Fashion"} imageSrc="../assets/hoodies/hoodie-4.jpeg" description="Cream Hoodie." price="49.99"/>
+          <Card name={"Men's Fashion"} imageSrc="../assets/hoodies/hoodie-1.jpeg" description="Cream Hoodie."/>
+          <Card name={"Men's Fashion"} imageSrc="../assets/hoodies/hoodie-2.jpeg" description="Black Hoodie."/>
+          <Card name={"Women's Fashion"} imageSrc="../assets/hoodies/hoodie-3.jpeg" description="Green Hoodie."/>
+          <Card name={"Men's Fashion"} imageSrc="../assets/hoodies/hoodie-4.jpeg" description="Cream Hoodie."/>
           </Tab.Panel>
           
           <Tab.Panel className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" >
-          <Card name={"Men's Fashion"} imageSrc="../assets/sweatshirts/sweatshirt-1.jpeg" description="Green Sweatshirt." price="49.99"/>
-          <Card name={"Men's Fashion"} imageSrc="../assets/sweatshirts/sweatshirt-2.jpeg" description="White Sweatshirt." price="49.99"/>
-          <Card name={"Men's Fashion"} imageSrc="../assets/sweatshirts/sweatshirt-3.jpeg" description="Cream Sweatshirt." price="49.99"/>
-          <Card name={"Men's Fashion"} imageSrc="../assets/sweatshirts/sweatshirt-4.jpeg" description="Red Sweatshirt." price="49.99"/>
+          <Card name={"Men's Fashion"} imageSrc="../assets/sweatshirts/sweatshirt-1.jpeg" description="Green Sweatshirt."/>
+          <Card name={"Men's Fashion"} imageSrc="../assets/sweatshirts/sweatshirt-2.jpeg" description="White Sweatshirt."/>
+          <Card name={"Men's Fashion"} imageSrc="../assets/sweatshirts/sweatshirt-3.jpeg" description="Cream Sweatshirt."/>
+          <Card name={"Men's Fashion"} imageSrc="../assets/sweatshirts/sweatshirt-4.jpeg" description="Red Sweatshirt."/>
           </Tab.Panel>
 
           <Tab.Panel className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" >
-          <Card name={"Women's Fashion"} imageSrc="../assets/jackets/jacket-1.jpeg" description="Yellow Jacket." price="49.99"/>
-          <Card name={"Women's Fashion"} imageSrc="../assets/jackets/jacket-2.jpeg" description="Orange jacket." price="49.99"/>
-          <Card name={"Men's Fashion"} imageSrc="../assets/jackets/jacket-3.jpeg" description="Puffer Jacket." price="49.99"/>
-          <Card name={"Men's Fashion"} imageSrc="../assets/jackets/jacket-4.jpeg" description="checkered Jacket." price="49.99"/>
+          <Card name={"Women's Fashion"} imageSrc="../assets/jackets/jacket-1.jpeg" description="Yellow Jacket."/>
+          <Card name={"Women's Fashion"} imageSrc="../assets/jackets/jacket-2.jpeg" description="Orange jacket."/>
+          <Card name={"Men's Fashion"} imageSrc="../assets/jackets/jacket-3.jpeg" description="Puffer Jacket."/>
+          <Card name={"Men's Fashion"} imageSrc="../assets/jackets/jacket-4.jpeg" description="checkered Jacket."/>
           </Tab.Panel>
 
           <Tab.Panel className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" >
-          <Card name={"Women's Fashion"} imageSrc="../assets/sneakers/sneaker-1.jpg" description="colored Sneakers." price="49.99"/>
-          <Card name={"Women's Fashion"} imageSrc="../assets/sneakers/sneaker-2.jpg" description="colored Sneakers." price="49.99"/>
-          <Card name={"Men's Fashion"} imageSrc="../assets/sneakers/sneaker-3.jpg" description="colored Sneakers." price="49.99"/>
-          <Card name={"Men's Fashion"} imageSrc="../assets/sneakers/sneaker-4.jpg" description="colored Sneakers." price="49.99"/>
+          <Card name={"Women's Fashion"} imageSrc="../assets/sneakers/sneaker-1.jpg" description="colored Sneakers."/>
+          <Card name={"Women's Fashion"} imageSrc="../assets/sneakers/sneaker-2.jpg" description="colored Sneakers."/>
+          <Card name={"Men's Fashion"} imageSrc="../assets/sneakers/sneaker-3.jpg" description="colored Sneakers."/>
+          <Card name={"Men's Fashion"} imageSrc="../assets/sneakers/sneaker-4.jpg" description="colored Sneakers."/>
           </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>
