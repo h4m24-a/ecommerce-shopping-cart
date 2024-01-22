@@ -58,7 +58,7 @@ export default function NavBar() {
                           location.pathname === item.to
                             ? "bg-gray-900 text-white"
                             : "text-black hover:bg-gray-900 hover:text-white",
-                          "rounded-md px-3 py-2 text-sm uppercase font-sora font-bold"
+                          "rounded-md px-3 py-2 text-sm uppercase font-sora"
                         )}
                       >
                         {item.name}

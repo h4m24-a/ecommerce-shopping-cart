@@ -37,7 +37,7 @@ const ProductPage = () => {
                       textStyle="text-center mt-2 mb-2 flex flex-row  item-center justify-between text-black"
                       imageSrc ={product.imageSrc}
                       price={product.price}
-                      moreInfo={() =>  navigate("/product.id")}
+                      moreInfo={() => navigate(`/products/${product?.id}`)}
                     />
                   ))}
                 </div>
