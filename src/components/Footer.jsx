@@ -59,8 +59,8 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="flex gap-20 flex-col md:flex-row">
-          <ul className="flex flex-col gap-5 cursor-pointer sm:mt-8 ">
+        <div className="flex gap-16 flex-col md:flex-row">
+          <ul className="flex flex-col gap-5 cursor-pointer sm:mt-8 lg:mt-0 ">
             <li className="text-white font-sora text-sm">About</li>
             <li className="text-white font-sora text-sm">Product</li>
             <li className="text-white font-sora text-sm">Contact</li>
