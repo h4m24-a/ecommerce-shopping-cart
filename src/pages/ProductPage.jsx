@@ -36,6 +36,7 @@ const ProductPage = () => {
                       description={product.description}
                       textStyle="text-center mt-2 mb-2 flex flex-row  item-center justify-between text-black"
                       imageSrc ={product.imageSrc}
+                      imageStyle="aspect-square object-cover hover:outline"
                       price={product.price}
                       moreInfo={() => navigate(`/products/${product?.id}`)}
                     />
