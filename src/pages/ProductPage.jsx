@@ -1,36 +1,45 @@
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
-import Card from "../components/ui/Card";
+import ProductCard from "../components/ui/ProductCard";
 import { Tab } from "@headlessui/react";
 import productData from "../productData";
+
+
+const handleAddToCart = (productId => {
+  console.log(`added to cart: ${productId}`);
+})
+
 
 const ProductPage = () => {
   return (
     <div>
       <NavBar />
-      <div className="container mx-auto">
+      <div className="container mx-auto mb-16">
         <Tab.Group defaultIndex={0}>
+          <div className="flex flex-col">
           <Tab.List className="flex justify-center p-4 space-x-4">
             {Object.keys(productData).map((category, index) => (
               <Tab
                 key={index}
-                className="bg-gray-200 uppercase font-montserrat text-gray-800 px-4 py-2 rounded-lg cursor-pointer"
+                className="bg-gray-200 uppercase font-montserrat text-gray-900 px-4 py-2  cursor-pointer"
               >
                 {category}
               </Tab>
             ))}
           </Tab.List>
+          </div>
           <Tab.Panels>
             {Object.values(productData).map((categoryProducts, index) => (
               <Tab.Panel key={index}>
                 <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                   {categoryProducts.map((product) => (
-                    <Card
+                    <ProductCard
                       key={product.id}
-                      name={product.name}
-                      imageSrc={product.imageSrc}
                       description={product.description}
+                      textStyle="text-center mt-2 flex flex-row gap-12 item-center justify-center text-black"
+                      imageSrc ={product.imageSrc}
                       price={product.price}
+                      addtoCart={() => handleAddToCart(product.id)}
                     />
                   ))}
                 </div>

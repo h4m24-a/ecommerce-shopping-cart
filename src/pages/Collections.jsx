@@ -1,6 +1,12 @@
+import NavBar from "../components/NavBar"
+import Footer from "../components/Footer"
+
 const Collections = () => {
   return (
-    <div>Collections</div>
+    <div>
+      <NavBar />
+      <Footer />
+    </div>
   )
 }
 

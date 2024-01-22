@@ -100,19 +100,3 @@ export default function NavBar() {
     </Disclosure>
   )
 }
-
-
-
-<NavLink
-to="/"
-title="Home"
-aria-label="Home"
-exact
-className={({ isActive }) =>
-  isActive
-    ? "font-medium text-white rounded-sm bg-black p-4 tracking-wide"
-    : " tracking-wide text-black transition-colors hover:text-blue-400  duration-200"
-}
->
-Home
-</NavLink>
