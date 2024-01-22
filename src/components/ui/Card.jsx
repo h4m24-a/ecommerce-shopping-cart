@@ -28,9 +28,9 @@ const Card = ({ textStyle, imageStyle, imageSrc, name, description, price }) => 
 };
 
 Card.propTypes = {
-  description: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  imageSrc: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  name: PropTypes.string,
+  imageSrc: PropTypes.string,
   price: PropTypes.string,
   textStyle: PropTypes.node,
   imageStyle: PropTypes.node,

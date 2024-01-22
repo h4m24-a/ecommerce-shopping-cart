@@ -36,8 +36,9 @@ const ProductPage = () => {
                     <ProductCard
                       key={product.id}
                       description={product.description}
-                      textStyle="text-center mt-2 flex flex-row gap-12 item-center justify-center text-black"
+                      textStyle="text-center mt-2 mb-2 flex flex-row  item-center justify-between text-black"
                       imageSrc ={product.imageSrc}
+                      imageStyle="hover:bg-red-500"
                       price={product.price}
                       addtoCart={() => handleAddToCart(product.id)}
                     />

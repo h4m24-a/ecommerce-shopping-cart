@@ -14,16 +14,16 @@ const Card = ({ textStyle, imageStyle, imageSrc, name, description, price, addto
         <div className={textStyle}>
 
           {/* Description */}
-          <p className="font-montserrat text-lg uppercase font-bold">{description}</p>
+          <p className="font-montserrat text-sm uppercase font-bold">{description}</p>
 
           {/* Price */}
-          <p className="font-montserrat text-lg uppercase font-bold">{price}</p>
+          <p className="font-montserrat text-sm uppercase font-bold">{price}</p>
 
           {/* Add to cart button */}
         </div>
           <Button  
           text="Add to Cart"
-          btnClass="bg-gray-950   font-montserrat uppercase m-2 mb-6 text-white rounded-md px-4 py-2 w-full transition duration-300 ease-in-out focus:outline-none hover:bg-blue-700" 
+          btnClass="bg-gray-950 font-montserrat uppercase m-2 mb-6 text-sm text-white rounded-md px-4 py-2 w-2/4 mx-auto transition duration-300 ease-in-out focus:outline-none hover:bg-blue-700" 
           onClick={addtoCart}>
           </Button>
       </div>
@@ -32,9 +32,9 @@ const Card = ({ textStyle, imageStyle, imageSrc, name, description, price, addto
 };
 
 Card.propTypes = {
-  description: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  imageSrc: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  name: PropTypes.string,
+  imageSrc: PropTypes.string,
   price: PropTypes.string,
   textStyle: PropTypes.node,
   imageStyle: PropTypes.node,
