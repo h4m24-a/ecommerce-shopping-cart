@@ -3,14 +3,12 @@ import NavBar from "../components/NavBar";
 import ProductCard from "../components/ui/ProductCard";
 import { Tab } from "@headlessui/react";
 import productData from "../productData";
+import { useNavigate } from "react-router-dom";
 
-
-const handleAddToCart = (productId => {
-  console.log(`added to cart: ${productId}`);
-})
 
 
 const ProductPage = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <NavBar />
@@ -38,9 +36,8 @@ const ProductPage = () => {
                       description={product.description}
                       textStyle="text-center mt-2 mb-2 flex flex-row  item-center justify-between text-black"
                       imageSrc ={product.imageSrc}
-                      imageStyle="hover:bg-red-500"
                       price={product.price}
-                      addtoCart={() => handleAddToCart(product.id)}
+                      moreInfo={() =>  navigate("/product.id")}
                     />
                   ))}
                 </div>
