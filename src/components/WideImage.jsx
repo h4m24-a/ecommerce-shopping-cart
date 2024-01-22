@@ -12,7 +12,7 @@ const WideImage = () => {
         <p className="text-5xl text-white font-sora">Enchant 2024 Collection</p>
         <Button
             text="Discover Now"
-            btnClass="mt-5 bg-transparent text-white rounded-2xl bg-white border border-gray-300 focus:outline-none hover:bg-white hover:text-black  focus:ring-4 focus:ring-gray-200 font-medium rounded-sm text-md px-14 py-3  me-2 mb-2"
+            btnClass="mt-6 bg-transparent text-white rounded-2xl border border-gray-300 focus:outline-none hover:bg-white hover:text-black  focus:ring-4 focus:ring-gray-200 font-medium rounded-sm text-md px-14 py-3  me-2 mb-2"
         />
         </div>
 
