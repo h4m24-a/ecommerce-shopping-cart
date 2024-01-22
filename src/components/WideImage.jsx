@@ -9,7 +9,7 @@ const WideImage = () => {
           alt="streetwear"
         />
         <div className="absolute flex justify-end items-center flex-col">
-        <p className="text-5xl text-white font-sora">Enchant 2024 Collection</p>
+        <p className="text-2xl md:text-4xl lg:text-5xl text-white font-sora">Enchant 2024 Collection</p>
         <Button
             text="Discover Now"
             btnClass="mt-6 bg-transparent text-white rounded-2xl border border-gray-300 focus:outline-none hover:bg-white hover:text-black  focus:ring-4 focus:ring-gray-200 font-medium rounded-sm text-md px-14 py-3  me-2 mb-2"
