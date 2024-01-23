@@ -14,12 +14,12 @@ const ProductPage = () => {
       <NavBar />
       <div className="container mx-auto mb-16">
         <Tab.Group defaultIndex={0}>
-          <div className="flex flex-col">
-          <Tab.List className="flex justify-center p-4 space-x-4">
+          <div className="flex flex-col items-center">
+          <Tab.List className="flex flex-col  mx-auto p-4  lg:flex-row ">
             {Object.keys(productData).map((category, index) => (
               <Tab
                 key={index}
-                className="bg-gray-200 uppercase font-montserrat text-gray-900 px-4 py-2  cursor-pointer"
+                className="uppercase font-montserrat hover:border-b border-black text-gray-900 px-4 py-2  cursor-pointer"
               >
                 {category}
               </Tab>
@@ -29,12 +29,12 @@ const ProductPage = () => {
           <Tab.Panels>
             {Object.values(productData).map((categoryProducts, index) => (
               <Tab.Panel key={index}>
-                <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                <div className="mt-14 grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                   {categoryProducts.map((product) => (
                     <ProductCard
                       key={product.id}
                       description={product.description}
-                      textStyle="text-center mt-2 mb-2 flex flex-row  item-center justify-between text-black"
+                      textStyle="text-center mt-2 mb-2 flex flex-col  item-center justify-between text-black lg:flex-row"
                       imageSrc ={product.imageSrc}
                       imageStyle="aspect-square object-cover hover:outline"
                       price={product.price}

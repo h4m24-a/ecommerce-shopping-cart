@@ -23,7 +23,7 @@ const Card = ({textStyle, imageStyle, imageSrc, name, description, price, moreIn
         </div>
           <Button  
           text="View"
-          btnClass="bg-gray-950 font-montserrat uppercase m-2 mb-6 text-sm text-white rounded-md px-4 py-2 w-1/4 mx-auto transition duration-300 ease-in-out focus:outline-none hover:bg-gray-950 hover:text-red-500" 
+          btnClass="bg-gray-950 font-montserrat uppercase m-2 mb-6 text-xs text-center text-white rounded-md px-4 py-2 w-1/4 mx-auto transition duration-300 ease-in-out focus:outline-none hover:bg-gray-950 hover:text-red-500" 
           onClick={moreInfo}>
           </Button>
       </div>
