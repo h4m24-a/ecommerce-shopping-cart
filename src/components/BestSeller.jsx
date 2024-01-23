@@ -14,8 +14,8 @@ const BestSeller = () => {
             <ArrowUpRightIcon className="h-9 w-9" />
         </div>
       </div>
-        <div className="flex mt-6 items-center justify-center gap-10  flex-col lg:flex-row lg">
-        <Card  imageSrc="../assets/bestseller-1.jpg" imageStyle="object-cover w-full h-full rounded-sm cursor-pointer" textStyle=" p-2 " description="Bomber Jacket"/>
+        <div className="flex mt-6 items-center justify-center gap-8  flex-col lg:flex-row lg">
+        <Card  imageSrc="../assets/bestseller-1.jpg" imageStyle="object-cover w-full h-full rounded-sm cursor-pointer" textStyle=" p-2 " description="Trench Coat"/>
         <Card  imageSrc="../assets/bestseller-2.jpg" imageStyle="object-cover w-full h-full rounded-sm cursor-pointer" textStyle=" p-2 " description="All Black"/>
         <Card  imageSrc="../assets/bestseller-3.jpg" imageStyle="object-cover w-full h-full rounded-sm cursor-pointer" textStyle=" p-2 " description="Grey Jacket"/>
         </div>
