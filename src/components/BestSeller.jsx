@@ -17,19 +17,19 @@ const BestSeller = () => {
       </div>
       <div className="flex mt-6 items-center justify-center gap-8   flex-col lg:flex-row">
         <Card
-          imageSrc="../assets/bestseller-1.jpg"
+          image="../assets/bestseller-1.jpg"
           imageStyle="object-cover w-full h-full rounded-sm cursor-pointer transition duration-500 hover:opacity-90"
           textStyle=" py-2 "
           description="Trench Coat"
         />
         <Card
-          imageSrc="../assets/bestseller-2.jpg"
+          image="../assets/bestseller-2.jpg"
           imageStyle="object-cover w-full h-full rounded-sm cursor-pointer transition duration-500 hover:opacity-90"
           textStyle=" py-2 "
           description="All Black"
         />
         <Card
-          imageSrc="../assets/bestseller-3.jpg"
+          image="../assets/bestseller-3.jpg"
           imageStyle="object-cover w-full h-full rounded-sm cursor-pointer transition duration-500 hover:opacity-90"
           textStyle=" py-2 "
           description="Grey Jacket"

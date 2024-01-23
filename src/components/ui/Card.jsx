@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 
-const Card = ({ textStyle, imageStyle, imageSrc, name, description, price }) => {
+const Card = ({ textStyle, imageStyle, image, name, description, price }) => {
   return (
     <div className="flex flex-col md:flex-row">
       <div className="flex flex-col bg-white">
         <div className="flex">
-          <img src={imageSrc} alt={name} className={imageStyle} />
+          <img src={image} alt={name} className={imageStyle} />
         </div>
 
 
@@ -29,7 +29,7 @@ const Card = ({ textStyle, imageStyle, imageSrc, name, description, price }) => 
 Card.propTypes = {
   description: PropTypes.string,
   name: PropTypes.string,
-  imageSrc: PropTypes.string,
+  image: PropTypes.string,
   price: PropTypes.string,
   textStyle: PropTypes.node,
   imageStyle: PropTypes.node,

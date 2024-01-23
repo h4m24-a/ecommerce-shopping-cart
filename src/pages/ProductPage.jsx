@@ -35,7 +35,7 @@ const ProductPage = () => {
                       key={product.id}
                       description={product.description}
                       textStyle="text-center mt-2 mb-2 flex flex-col  item-center justify-between text-black lg:flex-row"
-                      imageSrc ={product.imageSrc}
+                      image ={product.image}
                       imageStyle=" rounded-sm object-cover hover:outline"
                       price={product.price}
                       moreInfo={() => navigate(`/pages/product/${product?.id}`)}
