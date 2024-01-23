@@ -33,7 +33,7 @@ const ProductPage = () => {
                   {categoryProducts.map((product) => (
                     <ProductCard
                       key={product.id}
-                      description={product.description}
+                      name={product.name}
                       textStyle="text-center mt-2 mb-2 flex flex-col  item-center justify-between text-black lg:flex-row"
                       image ={product.image}
                       imageStyle=" rounded-sm object-cover hover:outline"

@@ -14,7 +14,7 @@ const Card = ({textStyle, imageStyle, image, name, description, price, moreInfo}
         <div className={textStyle}>
           {/* Description */}
           <p className="font-montserrat text-sm uppercase font-bold">
-            {description}
+            {name}
           </p>
 
           {/* Price */}
@@ -56,3 +56,5 @@ onClick={addtoCart}>
 // const handleAddToCart = (productId => {
 //     console.log(`added to cart: ${productId}`);
 //   })
+
+
