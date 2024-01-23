@@ -21,24 +21,30 @@ const Products = () => {
     <>
       <NavBar />
       {product ? (
-        <div className="  mx-automt-5 mb-20">
-          <div className="flex flex-col px-5 justify-center mx-auto lg:flex-row lg:justify-evenly">
-            <img className="w-full md:w-full lg:w-96" src={image} alt={`product ${id}`} />
+        <div className="  mx-auto mt-5 mb-20">
+          <div className="flex flex-col ite px-5 justify-center mx-auto lg:flex-row lg:justify-evenly">
+            <img
+              className="w-full object-cover md:w-full lg:w-96"
+              src={image}
+              alt={`product ${id}`}
+            />
             <div className="flex flex-col w-full justify-center gap-8 lg:w-1/5 ">
-              <p className="text-4xl font-sora mt-4 lg:mt-0 font-bold">{name}</p>
+              <p className="text-4xl font-sora mt-4 lg:mt-0 font-bold">
+                {name}
+              </p>
               <p className="text-2xl font-sora">${price}</p>
               <p className="text-sm font-sora">{description}</p>
-             
-              <div>
+
+              <div className=" border border-gray-400 mx-auto w-fit p-2">
                 <label htmlFor="Quantity" className="sr-only">
                   {" "}
                   Quantity{" "}
                 </label>
 
-                <div className="flex items-center p-2  justify-center gap-5">
+                <div className="flex items-center gap-1">
                   <button
                     type="button"
-                    className="h-8 w-8 leading-8 text-black text-lg transition hover:opacity-75"
+                    className="h-5 w-5 leading-5 text-black text-lg transition hover:opacity-75"
                   >
                     <MinusIcon className="" />
                   </button>
@@ -47,12 +53,12 @@ const Products = () => {
                     type="number"
                     id="Quantity"
                     value="1"
-                    className="h-8 w-20 rounded text-center border border-black text-md lg:text-xl "
+                    className="h-5 w-16 rounded text-center text-md lg:text-xl "
                   />
 
                   <button
                     type="button"
-                    className="h-8 w-8 leading-8 text-black text-lg transition hover:opacity-75"
+                    className="h-5 w-5 leading-8 text-black text-lg transition hover:opacity-75"
                   >
                     <PlusIcon />
                   </button>
@@ -61,9 +67,20 @@ const Products = () => {
 
               <Button
                 text="Add to Cart"
-                btnClass="bg-gray-950 font-montserrat uppercase m-2 mb-6 text-sm text-white rounded-md px-8 py-4 mx-auto transition duration-300 ease-in-out focus:outline-none hover:bg-gray-800"
+                btnClass="bg-black font-montserrat uppercase m-2 mb-6 text-sm text-white rounded-md px-8 py-4  transition duration-300 ease-in-out focus:outline-none hover:bg-gray-900"
                 onClick={handleAddToCart}
               ></Button>
+              <div className="flex flex-col justify-center items-center cursor-pointer gap-3 lg:items-stretch">
+                <p className="text-xs font-montserrat text-black hover:font-bold">
+                  Check In-Store Availability
+                </p>
+                <p className="text-xs font-montserrat text-black hover:font-bold">
+                  Product Details
+                </p>
+                <p className="text-xs font-montserrat text-black hover:font-bold">
+                  Delivery & Returns
+                </p>
+              </div>
             </div>
           </div>
         </div>
