@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import Button from "./Button";
 
-const Card = ({textStyle, imageStyle, image, name, description, price, moreInfo}) => {
+const Card = ({textStyle, imageStyle, image, name, price, moreInfo}) => {
   return (
     <div className="flex flex-col md:flex-row">
       <div className="flex flex-col bg-white">

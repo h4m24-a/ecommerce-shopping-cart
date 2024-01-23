@@ -21,11 +21,11 @@ const Products = () => {
     <>
       <NavBar />
       {product ? (
-        <div className="flex flex-col max-w-full mt-5 mb-20">
-          <div className="flex justify-evenly px-10 ">
-            <img className="" src={image} alt={`Product ${id}`} />
-            <div className="flex flex-col w-1/5 justify-center gap-8">
-              <p className="text-4xl font-sora  font-bold">{name}</p>
+        <div className="  mx-automt-5 mb-20">
+          <div className="flex flex-col px-5 justify-center mx-auto lg:flex-row lg:justify-evenly">
+            <img className="w-full md:w-full lg:w-96" src={image} alt={`product ${id}`} />
+            <div className="flex flex-col w-full justify-center gap-8 lg:w-1/5 ">
+              <p className="text-4xl font-sora mt-4 lg:mt-0 font-bold">{name}</p>
               <p className="text-2xl font-sora">${price}</p>
               <p className="text-sm font-sora">{description}</p>
              
@@ -35,7 +35,7 @@ const Products = () => {
                   Quantity{" "}
                 </label>
 
-                <div className="flex items-center p-2 border border-gray justify-center gap-1">
+                <div className="flex items-center p-2  justify-center gap-5">
                   <button
                     type="button"
                     className="h-8 w-8 leading-8 text-black text-lg transition hover:opacity-75"
@@ -47,7 +47,7 @@ const Products = () => {
                     type="number"
                     id="Quantity"
                     value="1"
-                    className="h-8 w-24 rounded text-center border-gray-200 text-md lg:text-xl "
+                    className="h-8 w-20 rounded text-center border border-black text-md lg:text-xl "
                   />
 
                   <button
