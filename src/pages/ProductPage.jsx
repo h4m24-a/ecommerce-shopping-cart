@@ -38,7 +38,7 @@ const ProductPage = () => {
                       imageSrc ={product.imageSrc}
                       imageStyle="aspect-square object-cover hover:outline"
                       price={product.price}
-                      moreInfo={() => navigate(`/products/${product?.id}`)}
+                      moreInfo={() => navigate(`/pages/product/${product?.id}`)}
                     />
                   ))}
                 </div>

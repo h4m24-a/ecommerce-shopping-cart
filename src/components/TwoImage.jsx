@@ -1,6 +1,6 @@
 const TwoImage = () => {
   return (
-    <div className="mt-10 flex flex-col justify-center gap-1 p-5 max-w-full md:flex-row">
+    <div className="mt-10 mb-20 flex flex-col justify-center gap-1 p-5 max-w-full md:flex-row">
       <div className="relative">
         <img
           className="object-cover rounded-sm h-full cursor-pointer  w-full"
