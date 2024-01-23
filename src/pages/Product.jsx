@@ -33,7 +33,7 @@ const Products = () => {
                 {name}
               </p>
               <p className="text-2xl font-sora">${price}</p>
-              <p className="text-sm font-sora">{description}</p>
+              <p className="text-sm text-gray-500 font-sora">{description}</p>
 
               <div className=" border border-gray-400 mx-auto w-fit p-2">
                 <label htmlFor="Quantity" className="sr-only">
