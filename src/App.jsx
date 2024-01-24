@@ -11,17 +11,14 @@ import { useState } from "react";
 function App() {
   const [carts, setCarts] = useState([])
   const [totalprice, setTotalPrice] = useState()
-  const [quantity, setQuantity] = useState(1)
-
+  
   
   const addToCart = (product) => {
     // Check if the product is already in the cart
-    const existingProductCart = carts.find((item) => item.id === product.id);
-
-    if (existingProductCart) {
+    const checkProductInCart = carts.find((product) => product.id === product.id);
+    if (checkProductInCart) {
       alert("Item already in cart")
     } else {
-
     // If the product is not in the cart, add it
       setCarts([...carts, product])
     }

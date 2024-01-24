@@ -5,22 +5,22 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 
 const Cart = ({ carts }) => {
-  // State to manage quantities for each item
+  
   const [quantity, setQuantity] = useState(1);
 
-  const updateQuantity = (itemId, newQuantity) => {
+  const updateQuantity = (productId, newQuantity) => {
     setQuantity((prevQuantities) => ({
       ...prevQuantities,
-      [itemId]: newQuantity,
+      [productId]: newQuantity,
     }));
   };
 
-  const decreaseQuantity = (itemId) => {
-    updateQuantity(itemId, Math.max(quantity[itemId] - 1, 1));
+  const decreaseQuantity = (productId) => {
+    updateQuantity(productId, Math.max(quantity[productId] - 1, 1));
   };
 
-  const increaseQuantity = (itemId) => {
-    updateQuantity(itemId, (quantity[itemId] || 0) + 1);
+  const increaseQuantity = (productId) => {
+    updateQuantity(productId, (quantity[productId] || 0) + 1);
   };
 
   return (
@@ -28,22 +28,22 @@ const Cart = ({ carts }) => {
       <NavBar />
 
       <div className="flex flex-col">
-        {carts.map((item) => (
-          <div key={item.id}>
+        {carts.map((product) => (
+          <div key={product.id}>
             <img
               className="h-32 w-32 rounded-md aspect-square object-cover"
-              src={item.image}
-              alt={item.name}
+              src={product.image}
+              alt={product.name}
             />
-            <p>{item.name}</p>
+            <p>{product.name}</p>
 
             <div className="flex flex-col">
               <Quantity
-                value={quantity[item.id] || 0}
-                onDecrease={() => decreaseQuantity(item.id)}
-                onIncrease={() => increaseQuantity(item.id)}
+                value={quantity[product.id] || 0}
+                onDecrease={() => decreaseQuantity(product.id)}
+                onIncrease={() => increaseQuantity(product.id)}
               />
-              <p>{item.price}</p>
+              <p>{product.price}</p>
             </div>
           </div>
         ))}
