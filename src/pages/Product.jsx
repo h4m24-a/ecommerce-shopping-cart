@@ -3,19 +3,19 @@ import Footer from "../components/Footer";
 import { useParams } from "react-router-dom";
 import productData from "../productData";
 import Button from "../components/ui/Button";
+import PropTypes from 'prop-types';
 
-const Product = ({ addToCart }) => {
+const Product = ({addToCart}) => {
   const { id } = useParams();
 
   const handleAddToCart = () => {
-    if (product) {
-      addToCart(product);
-    }
+    addToCart(product);
   };
 
   // Find the product with the given id in all categories
-  const allProducts = Object.values(productData).flat();
-  const product = allProducts.find((product) => product.id.toString() === id);
+  const product = Object.values(productData).flat().find(product => product.id.toString() === id);
+
+
   const { image, name, description, price } = product;
 
   return (
@@ -62,5 +62,9 @@ const Product = ({ addToCart }) => {
     </>
   );
 };
+
+Product.propTypes = {
+  addToCart: PropTypes.func
+}
 
 export default Product;

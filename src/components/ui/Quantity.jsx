@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { MinusIcon, PlusIcon } from "@heroicons/react/24/outline";
 
