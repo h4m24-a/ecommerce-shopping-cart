@@ -6,7 +6,15 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Collections from "./pages/Collections";
 import About from "./pages/About";
 
+import { useState } from "react";
+
 function App() {
+  const [carts, setCarts] = useState([])
+  const [totalprice, setTotalPrice] = useState()
+  const [quantity, setQuantity] = useState(1)
+
+  
+  
  
 
   return (

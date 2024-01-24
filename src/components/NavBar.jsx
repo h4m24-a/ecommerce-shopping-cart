@@ -6,12 +6,14 @@ import {
 } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const navigation = [
   { name: "Home", to: "/", current: true },
   { name: "Products", to: "/pages/productpage", current: false },
   { name: "Collections", to: "/pages/collections", current: false },
   { name: "About", to: "/pages/about", current: false },
+  
 ];
 
 function classNames(...classes) {
@@ -20,6 +22,8 @@ function classNames(...classes) {
 
 export default function NavBar() {
   const location = useLocation();
+  const navigate = useNavigate();
+
   return (
     <Disclosure as="nav" className="">
       {({ open }) => (
@@ -69,6 +73,7 @@ export default function NavBar() {
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center gap-4 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
+                onClick={() => navigate("/pages/cart")}
                   type="button"
                   className="relative p-2 text-black  focus:outline-none focus:ring-2 focus:ring-white hover:border-b-2 border-black active:translate-y-1"
                 >
