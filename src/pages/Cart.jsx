@@ -16,8 +16,10 @@ const Cart = ({ carts }) => {
   };
 
   const decreaseQuantity = (productId) => {
-    updateQuantity(productId, Math.max(quantity[productId] - 1, 1));
+    updateQuantity(productId, Math.max(quantity[productId] - 1, 1));   // first -1 is to decrease by one, second 1 is make sure that its never less than one
   };
+
+ 
 
   const increaseQuantity = (productId) => {
     updateQuantity(productId, (quantity[productId] || 0) + 1);
