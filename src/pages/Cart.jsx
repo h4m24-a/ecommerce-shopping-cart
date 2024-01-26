@@ -6,13 +6,13 @@ import PropTypes from "prop-types";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Button from "../components/ui/Button";
 
-const Cart = ({ carts }) => {
+const Cart = ({ carts, totalPrice, handleRemove }) => {
   const [quantity, setQuantity] = useState(1);
 
-  const updateQuantity = (productId, newQuantity) => {
+  const updateQuantity = (product, newQuantity) => {
     setQuantity((prevQuantities) => ({
       ...prevQuantities,
-      [productId]: newQuantity,
+      [product]: newQuantity,
     }));
   };
 
@@ -20,12 +20,12 @@ const Cart = ({ carts }) => {
     alert("Thank you for your order!");
   };
 
-  const decreaseQuantity = (productId) => {
-    updateQuantity(productId, Math.max(quantity[productId] - 1, 1)); // first -1 is to decrease by one, second 1 is make sure that its never less than one
+  const decreaseQuantity = (product) => {
+    updateQuantity(product, Math.max(quantity[product] - 1, 1)); // first -1 is to decrease by one, second 1 is make sure that its never less than one
   };
 
-  const increaseQuantity = (productId) => {
-    updateQuantity(productId, (quantity[productId] || 0) + 1);
+  const increaseQuantity = (product) => {
+    updateQuantity(product, (quantity[product] || 0) + 1);
   };
 
   return (
@@ -35,7 +35,7 @@ const Cart = ({ carts }) => {
       <h1 className="text-3xl text-center font-poppins font-bold mb-4">
         Your Shopping Cart
       </h1>
-      <div className="container min-h-screen flex-grow max-w-4xl mt-5 mx-auto flex-col flex justify-evenly p-4 lg:flex-row lg:gap-20">
+      <div className="container mb-6 flex-grow max-w-4xl mt-5 mx-auto flex-col flex justify-evenly p-4 lg:flex-row lg:gap-20">
         <div className="flex flex-col  gap-3 items-center flex-1">
           {carts.map((product) => (
             <div
@@ -49,8 +49,13 @@ const Cart = ({ carts }) => {
               />
 
               <div className="flex flex-col h-full items-end gap-2 flex-1">
-                <XMarkIcon className="w-14 h-14 hover:outline-2 p-3 active:text-red-500 cursor-pointer" />
-                <p className="text-xs flex-wrap ml-2 font-sora lg:text-md font-medium">{product.name}</p>
+                <XMarkIcon
+                  className="w-14 h-14 hover:outline-2 p-3 active:text-red-500 cursor-pointer"
+                  onClick={() => handleRemove(product.id)}
+                />
+                <p className="text-xs flex-wrap ml-2 font-sora lg:text-md font-medium">
+                  {product.name}
+                </p>
                 <p className=" text-xs font-sora font-medium lg:text-md">
                   ${product.price}
                 </p>
@@ -67,7 +72,7 @@ const Cart = ({ carts }) => {
         {carts.length > 0 && (
           <div className="flex flex-col mt-10 gap-3">
             <h2 className="font-poppins text-lg text">Your order summary</h2>
-            <p className=" text-md font-montserrat">Total $xx</p>
+            <p className=" text-md font-montserrat">Total ${totalPrice}</p>
             <Button
               btnClass="text-white w-full font-poppins bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
               text="Checkout"
@@ -84,6 +89,8 @@ const Cart = ({ carts }) => {
 
 Cart.propTypes = {
   carts: PropTypes.array.isRequired,
+  totalPrice: PropTypes.number,
+  handleRemove: PropTypes.func
 };
 
 export default Cart;

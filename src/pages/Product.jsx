@@ -4,6 +4,9 @@ import { useParams } from "react-router-dom";
 import productData from "../productData";
 import Button from "../components/ui/Button";
 import PropTypes from 'prop-types';
+import Newsletter from "../components/Newsletter"
+
+
 
 const Product = ({addToCart}) => {
   const { id } = useParams();
@@ -58,6 +61,7 @@ const Product = ({addToCart}) => {
       ) : (
         <p>Product not found</p>
       )}
+      <Newsletter />
       <Footer />
     </>
   );

@@ -10,7 +10,8 @@ import { useState } from "react";
 
 function App() {
   const [carts, setCarts] = useState([]);
-  const [totalprice, setTotalPrice] = useState();
+  const [totalPrice, setTotalPrice] = useState();
+  
 
   const addToCart = (newProduct) => {
     // Check if the product is already in the cart
@@ -25,6 +26,15 @@ function App() {
     }
   };
 
+
+
+  const handleRemove = (productId) => {
+    setCarts((prevCarts) => prevCarts.filter((product) => product.id !== productId));
+  };
+  
+
+
+
   return (
     <Router>
       <Routes>
@@ -37,7 +47,7 @@ function App() {
         />
         <Route exact path="/pages/collections" element={<Collections />} />
         <Route exact path="/pages/about" element={<About />} />
-        <Route exact path="/pages/cart" element={<Cart carts={carts} />} />
+        <Route exact path="/pages/cart" element={<Cart carts={carts} totalPrice={totalPrice} handleRemove={handleRemove} />} />
       </Routes>
     </Router>
   );
