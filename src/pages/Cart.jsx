@@ -1,13 +1,14 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Quantity from "../components/ui/Quantity";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Button from "../components/ui/Button";
 
-const Cart = ({ carts, totalPrice, handleRemove }) => {
+const Cart = ({ carts, handleRemove }) => {
   const [quantity, setQuantity] = useState(1);
+  const [totalPrice, setTotalPrice] = useState(0)
 
   const updateQuantity = (product, newQuantity) => {
     setQuantity((prevQuantities) => ({
@@ -28,12 +29,24 @@ const Cart = ({ carts, totalPrice, handleRemove }) => {
     updateQuantity(product, (quantity[product] || 0) + 1);
   };
 
+
+
+
+  useEffect(() => {
+    const handlePrice = () => {
+      return carts.reduce((total, product) => total + product.price * (quantity[product.id] || 1), 0).toFixed(2);};
+
+    // Calculate total price when carts or quantity change
+    setTotalPrice(handlePrice());
+  }, [carts, quantity]); 
+
+
   return (
     <>
       <NavBar />
 
       <h1 className="text-3xl text-center font-poppins font-bold mb-4">
-        Your Shopping Cart
+        Your Cart
       </h1>
       <div className="container mb-6 flex-grow max-w-4xl mt-5 mx-auto flex-col flex justify-evenly p-4 lg:flex-row lg:gap-20">
         <div className="flex flex-col  gap-3 items-center flex-1">
@@ -60,7 +73,7 @@ const Cart = ({ carts, totalPrice, handleRemove }) => {
                   ${product.price}
                 </p>
                 <Quantity
-                  value={quantity[product.id] || 0}
+                  value={quantity[product.id] || 1}
                   onDecrease={() => decreaseQuantity(product.id)}
                   onIncrease={() => increaseQuantity(product.id)}
                 />
@@ -70,11 +83,11 @@ const Cart = ({ carts, totalPrice, handleRemove }) => {
         </div>
 
         {carts.length > 0 && (
-          <div className="flex flex-col mt-10 gap-3">
-            <h2 className="font-poppins text-lg text">Your order summary</h2>
-            <p className=" text-md font-montserrat">Total ${totalPrice}</p>
+          <div className="flex flex-col  items-center p-8 gap-5">
+            <h2 className="font-poppins text-lg text">Order summary</h2>
+            <p className=" text-md font-montserrat">Total $ {totalPrice}</p>
             <Button
-              btnClass="text-white w-full font-poppins bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+              btnClass="text-white w-full font-poppins bg-gray-950 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
               text="Checkout"
               onClick={handleCheckout}
             />
