@@ -53,7 +53,7 @@ const Cart = ({ carts, handleRemove }) => {
       <h1 className="text-3xl text-center font-poppins font-bold mb-4">
         Your Cart
       </h1>
-      <div className="container mb-56 flex-grow max-w-4xl mt-5 mx-auto flex-col flex justify-evenly p-4 lg:flex-row lg:gap-32">
+      <div className="container mb-56   flex-grow max-w-4xl mt-5 mx-auto flex-col flex justify-evenly p-4 lg:flex-row lg:gap-32">
         <div className="flex flex-col  gap-3 items-center flex-1">
           {carts.map((product) => (
             <div
@@ -88,15 +88,15 @@ const Cart = ({ carts, handleRemove }) => {
         </div>
 
         {carts.length > 0 && (
-          <div className="flex flex-col mt-6 items-center gap-5 lg:mt-0">
-            <h2 className="font-poppins text-lg text">Order summary</h2>
-            <p className=" text-md font-montserrat">Total $ {totalPrice}</p>
-            <Button
-              btnClass="text-white w-full font-poppins bg-gray-950 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
-              text="Checkout"
-              onClick={handleCheckout}
-            />
-          </div>
+         <div className="flex flex-col w-full mx-auto mt-6 pt-5 border just border-gray-200 items-center gap-5 lg:mt-0 lg:w-80">
+         <h2 className="font-montserrat w-full text-md uppercase border-b pb-3 text-center">Order summary</h2>
+         <p className=" text-md font-montserrat uppercase">Total <span className="font-bold ml-2 tracking-widest">£{totalPrice}</span></p>
+         <Button
+           btnClass="text-white w-full uppercase font-poppins bg-gray-950 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium text-sm px-5 py-2.5 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+           text="Checkout"
+           onClick={handleCheckout}
+         />
+       </div>
         )}
       </div>
         
