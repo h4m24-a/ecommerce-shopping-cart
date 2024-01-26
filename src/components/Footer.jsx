@@ -2,7 +2,7 @@ import Button from "../components/ui/Button";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-950 min-h-screen flex flex-col">
+    <footer className="bg-gray-950 flex flex-col">
     <div className="flex flex-col justify-between mt-auto  py-10 px-20 md:flex-row flex-1">
       <div className="flex flex-col gap-5">
           <p className="text-white text-2xl uppercase font-sora ">

@@ -17,9 +17,6 @@ const Cart = ({ carts, handleRemove }) => {
     }));
   };
 
-  const handleCheckout = () => {
-    alert("Thank you for your order!");
-  };
 
   const decreaseQuantity = (product) => {
     updateQuantity(product, Math.max(quantity[product] - 1, 1)); // first -1 is to decrease by one, second 1 is make sure that its never less than one
@@ -41,6 +38,14 @@ const Cart = ({ carts, handleRemove }) => {
   }, [carts, quantity]); 
 
 
+
+
+  const handleCheckout = () => {
+    alert("Thank you for your order!");
+  };
+
+
+  
   return (
     <>
       <NavBar />
@@ -48,7 +53,7 @@ const Cart = ({ carts, handleRemove }) => {
       <h1 className="text-3xl text-center font-poppins font-bold mb-4">
         Your Cart
       </h1>
-      <div className="container mb-6 flex-grow max-w-4xl mt-5 mx-auto flex-col flex justify-evenly p-4 lg:flex-row lg:gap-20">
+      <div className="container mb-56 flex-grow max-w-4xl mt-5 mx-auto flex-col flex justify-evenly p-4 lg:flex-row lg:gap-32">
         <div className="flex flex-col  gap-3 items-center flex-1">
           {carts.map((product) => (
             <div
@@ -83,7 +88,7 @@ const Cart = ({ carts, handleRemove }) => {
         </div>
 
         {carts.length > 0 && (
-          <div className="flex flex-col  items-center p-8 gap-5">
+          <div className="flex flex-col mt-6 items-center gap-5 lg:mt-0">
             <h2 className="font-poppins text-lg text">Order summary</h2>
             <p className=" text-md font-montserrat">Total $ {totalPrice}</p>
             <Button
