@@ -3,7 +3,7 @@ const Newsletter = () => {
 
 <section>
   <div className="mx-auto w-full max-w-full">
-    <div className="bg-slate-50 p-8 text-center sm:p-10 md:p-16">
+    <div className=" p-8 text-center sm:p-10 md:p-16">
       <h2 className="mb-4 text-3xl font-montserrat font-bold md:text-5xl">Join for exclusives drops</h2>
       <p className="mx-auto mb-6 max-w-2xl  text-sm text-gray-500 font-montserrat sm:text-base md:mb-10 lg:mb-12">Do not miss out on the chance to indulge in the latest fashion trends at unbeatable prices.</p>
       <div className="mx-auto mb-4 flex max-w-lg justify-center">
