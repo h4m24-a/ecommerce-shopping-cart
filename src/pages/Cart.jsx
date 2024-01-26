@@ -53,7 +53,7 @@ const Cart = ({ carts, handleRemove }) => {
           {carts.map((product) => (
             <div
               key={product.id}
-              className="flex flex-row w-full items-center justify-center  p-4 border-2 border-gray-200 rounded-lg md:justify-center lg:gap-20"
+              className="flex flex-row w-full items-center justify-center p-4 border-t border-b border-gray-300 md:justify-center lg:gap-20"
             >
               <img
                 className="h-32 w-32 rounded-md object-cover mb-4 flex-shrink-0"
@@ -63,7 +63,7 @@ const Cart = ({ carts, handleRemove }) => {
 
               <div className="flex flex-col h-full items-end gap-2 flex-1">
                 <XMarkIcon
-                  className="w-14 h-14 hover:outline-2 p-3 active:text-red-500 cursor-pointer"
+                  className="w-12 h-12 hover:outline-2 p-3 active:text-red-500 cursor-pointer"
                   onClick={() => handleRemove(product.id)}
                 />
                 <p className="text-xs flex-wrap ml-2 font-sora lg:text-md font-medium">
@@ -94,7 +94,8 @@ const Cart = ({ carts, handleRemove }) => {
           </div>
         )}
       </div>
-
+        
+        
       <Footer />
     </>
   );
