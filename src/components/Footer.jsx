@@ -2,9 +2,9 @@ import Button from "../components/ui/Button";
 
 const Footer = () => {
   return (
-    <footer className=" bg-gray-950  max-w-full ">
-      <div className="flex flex-col justify-between py-10 px-20 md:flex-row">
-        <div className="flex flex-col gap-5">
+    <footer className="bg-gray-950 min-h-screen mt-auto flex flex-col">
+    <div className="flex flex-col justify-between py-10 px-20 md:flex-row flex-1">
+      <div className="flex flex-col gap-5">
           <p className="text-white text-2xl uppercase font-sora ">
             Enchant Streetwear
           </p>
