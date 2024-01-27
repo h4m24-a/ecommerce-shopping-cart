@@ -22,7 +22,7 @@ function classNames(...classes) {
 }
 
 const Product = ({ addToCart, carts }) => {
-  const [selected, setSelected] = useState(links[1]);
+  const [selected, setSelected] = useState(links);
   const { id } = useParams();
 
   const handleAddToCart = () => {
@@ -30,9 +30,7 @@ const Product = ({ addToCart, carts }) => {
   };
 
   // Find the product with the given id in all categories
-  const product = Object.values(productData)
-    .flat()
-    .find((product) => product.id.toString() === id);
+  const product = Object.values(productData).flat().find((product) => product.id.toString() === id);
 
   const { image, name, description, price } = product;
 
@@ -61,7 +59,7 @@ const Product = ({ addToCart, carts }) => {
                       Select Size
                     </Listbox.Label>
                     <div className="relative">
-                      <Listbox.Button className="relative mt-3 w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6">
+                      <Listbox.Button className="relative mt-3 w-full cursor-default rounded-md bg-white py-4 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6">
                         <span className="flex items-center">
                           <span className="ml-3 block truncate">
                             {selected.name}
