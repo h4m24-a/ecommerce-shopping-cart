@@ -1,5 +1,9 @@
 import { Disclosure } from "@headlessui/react";
-import {Bars3Icon, XMarkIcon, ShoppingCartIcon,} from "@heroicons/react/24/outline"
+import {
+  Bars3Icon,
+  XMarkIcon,
+  ShoppingCartIcon,
+} from "@heroicons/react/24/outline";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -10,16 +14,13 @@ const navigation = [
   { name: "Products", to: "/pages/productpage", current: false },
   { name: "Collections", to: "/pages/collections", current: false },
   { name: "About", to: "/pages/about", current: false },
-  
 ];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-
-
-const Navbar = ({badge}) => {
+const Navbar = ({ badge }) => {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -70,21 +71,24 @@ const Navbar = ({badge}) => {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center gap-4 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+            
               <button
-              onClick={() => navigate("/pages/cart")}
-              type="button"
-              className="relative p-2 text-black focus:outline-none focus:ring-2 focus:ring-white hover:border-b-2 border-black active:translate-y-1"
-            >
-              <span className="absolute -inset-1.5" />
-              <span className="sr-only">Cart</span>
-              <ShoppingCartIcon
-                className="h-7 w-7 md:h-8 md:w-8"
-                aria-hidden="true"
-              />
-              <p>{badge}</p>
-            </button>
-              </div>
+                onClick={() => navigate("/pages/cart")}
+                type="button"
+                className="relative p-2 text-black focus:outline-none focus:ring-2 focus:ring-white hover:border-b-2 border-black active:translate-y-1"
+              >
+                <span className="absolute -inset-1.5" />
+                <span className="sr-only">Cart</span>
+                <ShoppingCartIcon
+                  className="h-7 w-7 md:h-8 md:w-8"
+                  aria-hidden="true"
+                />
+                
+                <div className="absolute font-montserrat inline-flex items-center justify-center w-7 h-7 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">
+                  {badge}
+                </div>
+              </button>
             </div>
           </div>
 
@@ -92,20 +96,19 @@ const Navbar = ({badge}) => {
             <div className="space-y-1 flex flex-col px-2 pb-3 pt-2">
               {navigation.map((item) => (
                 <NavLink
-                key={item.name}
-                to={item.to}
-                title={item.name}
-                aria-label={item.name}
-                className={classNames(
-                  location.pathname === item.to
-                    ? "bg-gray-900 text-white"
-                    : "text-black hover:bg-gray-900 hover:text-white",
-                  "rounded-md px-3 py-2 text-sm uppercase font-sora font-bold"
-                )}
-              >
-                {item.name}
-              </NavLink>
-
+                  key={item.name}
+                  to={item.to}
+                  title={item.name}
+                  aria-label={item.name}
+                  className={classNames(
+                    location.pathname === item.to
+                      ? "bg-gray-900 text-white"
+                      : "text-black hover:bg-gray-900 hover:text-white",
+                    "rounded-md px-3 py-2 text-sm uppercase font-sora font-bold"
+                  )}
+                >
+                  {item.name}
+                </NavLink>
               ))}
             </div>
           </Disclosure.Panel>
@@ -113,10 +116,10 @@ const Navbar = ({badge}) => {
       )}
     </Disclosure>
   );
-}
+};
 
 Navbar.propTypes = {
-  badge: PropTypes.number
-}
+  badge: PropTypes.number,
+};
 
 export default Navbar;
