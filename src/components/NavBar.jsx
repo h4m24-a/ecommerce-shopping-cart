@@ -116,7 +116,7 @@ const Navbar = ({badge}) => {
 }
 
 Navbar.propTypes = {
-  badge: PropTypes.string
+  badge: PropTypes.number
 }
 
 export default Navbar;
