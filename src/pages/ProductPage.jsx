@@ -4,14 +4,14 @@ import ProductCard from "../components/ui/ProductCard";
 import { Tab } from "@headlessui/react";
 import productData from "../productData";
 import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
 
-
-const ProductPage = () => {
+const ProductPage = ({carts}) => {
   const navigate = useNavigate();
   return (
     <div>
-      <NavBar />
+      <NavBar badge={carts.length} />
       <div className="container mx-auto mb-16">
         <Tab.Group defaultIndex={0}>
           <div className="flex flex-col items-center">
@@ -51,5 +51,10 @@ const ProductPage = () => {
     </div>
   );
 };
+
+ProductPage.propTypes = {
+  carts: PropTypes.array
+};
+
 
 export default ProductPage;

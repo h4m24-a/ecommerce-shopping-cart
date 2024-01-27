@@ -37,15 +37,15 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<HomePage />} />
-        <Route exact path="/pages/productpage" element={<ProductPage />} />
+        <Route exact path="/" element={<HomePage  carts={carts}/>} />
+        <Route exact path="/pages/productpage" element={<ProductPage carts={carts} />} />
         <Route
           exact
           path="/pages/product/:id"
-          element={<Product addToCart={addToCart} />}
+          element={<Product addToCart={addToCart} carts={carts} />}
         />
-        <Route exact path="/pages/collections" element={<Collections />} />
-        <Route exact path="/pages/about" element={<About />} />
+        <Route exact path="/pages/collections" element={<Collections carts={carts} />} />
+        <Route exact path="/pages/about" element={<About carts={carts} />} />
         <Route
           exact
           path="/pages/cart"

@@ -8,7 +8,7 @@ import Newsletter from "../components/Newsletter"
 
 
 
-const Product = ({addToCart}) => {
+const Product = ({addToCart, carts}) => {
   const { id } = useParams();
 
   const handleAddToCart = () => {
@@ -23,7 +23,7 @@ const Product = ({addToCart}) => {
 
   return (
     <>
-      <NavBar />
+      <NavBar badge={carts.length} />
       {product ? (
         <div className="  mx-auto mt-5 mb-20">
           <div className="flex flex-col ite px-5 justify-center mx-auto lg:flex-row lg:justify-evenly">
@@ -68,7 +68,8 @@ const Product = ({addToCart}) => {
 };
 
 Product.propTypes = {
-  addToCart: PropTypes.func
+  addToCart: PropTypes.func,
+  carts: PropTypes.array
 }
 
 export default Product;

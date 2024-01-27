@@ -1,9 +1,6 @@
 import { Disclosure } from "@headlessui/react";
-import {
-  Bars3Icon,
-  XMarkIcon,
-  ShoppingCartIcon,
-} from "@heroicons/react/24/outline";
+import {Bars3Icon, XMarkIcon, ShoppingCartIcon,} from "@heroicons/react/24/outline"
+import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -20,7 +17,9 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function NavBar() {
+
+
+const Navbar = ({badge}) => {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -72,18 +71,19 @@ export default function NavBar() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center gap-4 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button
-                onClick={() => navigate("/pages/cart")}
-                  type="button"
-                  className="relative p-2 text-black  focus:outline-none focus:ring-2 focus:ring-white hover:border-b-2 border-black active:translate-y-1"
-                >
-                  <span className="absolute -inset-1.5" />
-                  <span className="sr-only">Cart</span>
-                  <ShoppingCartIcon
-                    className="h-7 w-7 md:h-8 md:w-8"
-                    aria-hidden="true"
-                  />
-                </button>
+              <button
+              onClick={() => navigate("/pages/cart")}
+              type="button"
+              className="relative p-2 text-black focus:outline-none focus:ring-2 focus:ring-white hover:border-b-2 border-black active:translate-y-1"
+            >
+              <span className="absolute -inset-1.5" />
+              <span className="sr-only">Cart</span>
+              <ShoppingCartIcon
+                className="h-7 w-7 md:h-8 md:w-8"
+                aria-hidden="true"
+              />
+              <p>{badge}</p>
+            </button>
               </div>
             </div>
           </div>
@@ -114,3 +114,9 @@ export default function NavBar() {
     </Disclosure>
   );
 }
+
+Navbar.propTypes = {
+  badge: PropTypes.string
+}
+
+export default Navbar;

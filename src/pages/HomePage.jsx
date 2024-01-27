@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Navbar from "../components/NavBar"
 import Hero from "../components/Hero"
 import TwoImage from "../components/TwoImage"
@@ -9,10 +10,10 @@ import WideImage from "../components/WideImage"
 import Newsletter from "../components/Newsletter"
 import BestSeller from "../components/BestSeller"
 
-const HomePage = () => {
+const HomePage = ({carts}) => {
   return (
     <div className="max-w-8xl mx-auto">
-        <Navbar />
+        <Navbar  badge={carts.length}  />
         <Hero />
         <TwoImage />
         <BestSeller />
