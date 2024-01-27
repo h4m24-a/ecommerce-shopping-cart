@@ -26,7 +26,7 @@ const Product = ({ addToCart, carts }) => {
   const { id } = useParams();
 
   const handleAddToCart = () => {
-    addToCart({ ...product, size: selected.name });
+    addToCart({ ...product, size: selected.name });   // product represents the product you want to add to the cart,  includes id, image, name, description, and price.
   };
 
   // Find the product with the given id in all categories
