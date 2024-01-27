@@ -26,7 +26,7 @@ const Product = ({ addToCart, carts }) => {
   const { id } = useParams();
 
   const handleAddToCart = () => {
-    addToCart(product);
+    addToCart({ ...product, size: selected.name });
   };
 
   // Find the product with the given id in all categories
@@ -140,7 +140,7 @@ const Product = ({ addToCart, carts }) => {
               <Button
                 text="Add to Cart"
                 btnClass="bg-black mt-8 font-montserrat uppercase m-2 mb-6 text-sm text-white rounded-md px-8 py-4  transition duration-300 ease-in-out active:bg-red-500 focus:outline-none hover:bg-gray-900"
-                onClick={handleAddToCart}
+                onClick={() => handleAddToCart(selected.name)}
               ></Button>
               <div className="flex flex-col justify-center items-center cursor-pointer gap-3 lg:items-stretch">
                 <p className="text-xs font-montserrat text-black hover:font-bold">

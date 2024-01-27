@@ -78,6 +78,9 @@ const Cart = ({ carts, handleRemove }) => {
                 <p className=" text-xs font-sora font-medium lg:text-md">
                   ${product.price}
                 </p>
+                <p className=" text-xs font-sora font-medium lg:text-md">
+                {product.size}
+                </p>
                 <Quantity
                   value={quantity[product.id] || 1}
                   onDecrease={() => decreaseQuantity(product.id)}
