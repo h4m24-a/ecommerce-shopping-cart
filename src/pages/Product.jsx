@@ -22,7 +22,7 @@ function classNames(...classes) {
 }
 
 const Product = ({ addToCart, carts }) => {
-  const [selected, setSelected] = useState(links);
+  const [selected, setSelected] = useState(links[0]);
   const { id } = useParams();
 
   const handleAddToCart = () => {
@@ -49,7 +49,7 @@ const Product = ({ addToCart, carts }) => {
               <p className="text-4xl font-sora mt-4 lg:mt-0 font-bold">
                 {name}
               </p>
-              <p className="text-2xl mt-8 font-sora">${price}</p>
+              <p className="text-2xl mt-8 font-sora border-b border-black py-2">${price}</p>
               <p className="text-sm text-gray-500 mt-8 font-sora">{description}</p>
               
               <Listbox value={selected} onChange={setSelected}>
@@ -59,7 +59,7 @@ const Product = ({ addToCart, carts }) => {
                       Select Size
                     </Listbox.Label>
                     <div className="relative">
-                      <Listbox.Button className="relative mt-3 w-full cursor-default rounded-md bg-white py-4 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6">
+                      <Listbox.Button className="relative mt-3 w-full cursor-default rounded-md bg-white py-1 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6">
                         <span className="flex items-center">
                           <span className="ml-3 block truncate">
                             {selected.name}
