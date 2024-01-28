@@ -1,77 +1,41 @@
+import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import Card from "../components/ui/Card";
+
 const LatestCollection = () => {
   return (
-    <section>
-      <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-        <header className="text-center">
-
-          <p className="mx-auto font-montserrat text-sm md:text-lg max-w-md text-gray-500">
-          Unveiling our latest collection, where timeless elegance meets modern flair.
+    <div className="max-w-full px-12 mt-26 mb-20">
+      <div className="flex flex-row items-center py-6 justify-between border-b-2 border-black">
+        <h1 className="text-4xl font-sora  uppercase  md:text-4xl lg:text-6xl">
+          Latest Arrivals
+        </h1>
+        <div className="flex flex-row items-center gap-3">
+          <p className="text-xl font-sora text-center cursor-pointer ">
+            See All
           </p>
-        </header>
-
-        <ul className="mt-8 grid grid-cols-1 gap-2 lg:grid-cols-3">
-          <li>
-            <a href="#" className="group relative block">
-              <img
-                src="https://images.unsplash.com/photo-1518362165686-c587a1de1003?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="sneakers"
-                className="aspect-square w-full object-cover transition duration-500 group-hover:opacity-90"
-              />
-
-              <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
-                <h3 className="text-xl font-sora font-medium text-white">
-                  Sneakers
-                </h3>
-
-                <span className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white">
-                  Shop Now
-                </span>
-              </div>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" className="group relative block">
-              <img
-                src="https://images.unsplash.com/photo-1515294898968-a408405d7674?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="jumpers"
-                className="aspect-square w-full object-cover transition duration-500 group-hover:opacity-90"
-              />
-
-              <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
-                <h3 className="text-xl font-sora font-medium text-white">
-                  Winter Jumpers
-                </h3>
-
-                <span className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white">
-                  Shop Now
-                </span>
-              </div>
-            </a>
-          </li>
-
-          <li className="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
-            <a href="#" className="group relative block">
-              <img
-                src="https://images.unsplash.com/photo-1508900411252-1a7265f23352?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="jeans"
-                className="aspect-square w-full object-cover transition duration-500 group-hover:opacity-90"
-              />
-
-              <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
-                <h3 className="text-xl font-sora font-medium text-white">
-                  Skinny Jeans Blue
-                </h3>
-
-                <span className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white">
-                  Shop Now
-                </span>
-              </div>
-            </a>
-          </li>
-        </ul>
+          <ArrowUpRightIcon className="h-9 w-9" />
+        </div>
       </div>
-    </section>
+      <div className="flex mt-6 items-center justify-center gap-8   flex-col lg:flex-row">
+        <Card
+          image="../assets/latest-1.jpg"
+          imageStyle="object-cover w-full h-full rounded-sm cursor-pointer transition duration-500 hover:opacity-90"
+          textStyle=" py-2 "
+          description="White Pants"
+        />
+        <Card
+          image="../assets/latest-2.jpg"
+          imageStyle="object-cover w-full h-full rounded-sm cursor-pointer transition duration-500 hover:opacity-90"
+          textStyle=" py-2 "
+          description="Blue Pants"
+        />
+        <Card
+          image="../assets/latest-3.jpg"
+          imageStyle="object-cover w-full h-full rounded-sm cursor-pointer transition duration-500 hover:opacity-90"
+          textStyle=" py-2 "
+          description="Grey Pants"
+        />
+      </div>
+    </div>
   );
 };
 

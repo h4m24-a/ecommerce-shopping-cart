@@ -17,7 +17,6 @@ const HomePage = ({carts}) => {
         <Hero />
         <TwoImage />
         <BestSeller />
-        <Bordered />
         <LatestCollection />
         <WideImage />
         <Newsletter />
