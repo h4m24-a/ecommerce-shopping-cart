@@ -7,7 +7,7 @@ const TwoImage = () => {
           src="https://img.freepik.com/free-vector/fashion-models-with-urban-outfit_79603-524.jpg?size=626&ext=jpg&ga=GA1.1.316288856.1705851322&semt=ais"
           alt="streetwear"
         />
-        <p className="relative font-montserrat bottom-0 left-0 p-3 font-extrabold text-2xl uppercase text-white bg-gray-950 ">
+        <p className="relative font-montserrat bottom-0 left-0 p-3 font-extrabold text-lg uppercase text-white bg-gray-950 md:text-2xl ">
           Outfit of the day
         </p>
       </div>
@@ -17,7 +17,7 @@ const TwoImage = () => {
           src="https://img.freepik.com/free-vector/fashion-model-with-casual-outfit_79603-526.jpg?size=626&ext=jpg&ga=GA1.1.316288856.1705851322&semt=ais"
           alt="streetwear"
         />
-        <p className="relative font-montserrat bottom-0 left-0 p-3 font-extrabold text-2xl uppercase text-white bg-gray-950 ">
+        <p className="relative font-montserrat bottom-0 left-0 p-3 font-extrabold text-lg uppercase text-white bg-gray-950 md:text-2xl ">
           Outfit of the day
         </p>
       </div>

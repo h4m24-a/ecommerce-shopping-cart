@@ -4,8 +4,8 @@ import Card from "../components/ui/Card";
 const BestSeller = () => {
   return (
     <div className="max-w-full px-12 mt-26 mb-20">
-      <div className="flex flex-row items-center py-6 justify-between border-b-2 border-black">
-        <h1 className="text-4xl font-sora  uppercase  md:text-4xl lg:text-6xl">
+      <div className="flex flex-col items-center py-6 justify-between border-b-2 border-black lg:flex-row">
+        <h1 className="text-2xl font-sora text-center  uppercase  md:text-3xl lg:text-6xl">
           Best Seller
         </h1>
         <div className="flex flex-row items-center gap-3">
