@@ -46,11 +46,11 @@ const Product = ({ addToCart, carts }) => {
               alt={`product ${id}`}
             />
             <div className="flex flex-col w-full justify-center lg:w-1/5 ">
-              <p className="text-4xl font-sora mt-4 lg:mt-0 font-bold">
+              <p className="text-3xl font-montserrat mt-4 lg:mt-0 font-bold">
                 {name}
               </p>
-              <p className="text-2xl mt-8 font-sora border-b border-black py-2">${price}</p>
-              <p className="text-sm text-gray-500 mt-8 font-sora">{description}</p>
+              <p className="text-xl mt-8 font-montserrat border-b border-black py-2">${price}</p>
+              <p className="text-xs text-gray-500 mt-8 font-montserrat">{description}</p>
               
               <Listbox value={selected} onChange={setSelected}>
                 {({ open }) => (
