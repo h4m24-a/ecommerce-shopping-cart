@@ -1,7 +1,16 @@
 import PropTypes from "prop-types";
 import Button from "./Button";
 
-const Card = ({textStyle, imageStyle, image, name, price, moreInfo}) => {
+
+const Card = ({ textStyle, imageStyle, image, name, price, moreInfo }) => {
+  
+
+  const handleMoreInfoClick = () => {
+    moreInfo(); // Call the original moreInfo function passed as a prop
+    // Scroll to the top of the page
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="flex flex-col md:flex-row">
       <div className="flex flex-col bg-white">
@@ -19,20 +28,19 @@ const Card = ({textStyle, imageStyle, image, name, price, moreInfo}) => {
 
           {/* Price */}
           <p className="font-montserrat text-sm uppercase font-bold">{price}</p>
-
         </div>
-          <Button  
+        
+        <Button
           text="View"
-          btnClass="bg-gray-950 font-montserrat uppercase m-2 mb-6 text-xs text-center text-white rounded-md px-4 py-2 w-1/4 mx-auto transition duration-300 ease-in-out focus:outline-none hover:bg-gray-950 hover:text-red-500" 
-          onClick={moreInfo}>
-          </Button>
+          btnClass="bg-gray-950 font-montserrat uppercase m-2 mb-6 text-xs text-center text-white rounded-md px-4 py-2 w-1/4 mx-auto transition duration-300 ease-in-out focus:outline-none hover:bg-gray-950 hover:text-red-500"
+          onClick={handleMoreInfoClick}
+        />
       </div>
     </div>
   );
 };
 
 Card.propTypes = {
-  description: PropTypes.string,
   name: PropTypes.string,
   image: PropTypes.string,
   price: PropTypes.string,
@@ -42,19 +50,3 @@ Card.propTypes = {
 };
 
 export default Card;
-
-// {addtoCart}
-
-{
-  /* <Button  
-text="Add to Cart"
-btnClass="bg-gray-950 font-montserrat uppercase m-2 mb-6 text-sm text-white rounded-md px-4 py-2 w-2/4 mx-auto transition duration-300 ease-in-out focus:outline-none hover:bg-blue-700" 
-onClick={addtoCart}>
-</Button> */
-}
-
-// const handleAddToCart = (productId => {
-//     console.log(`added to cart: ${productId}`);
-//   })
-
-
