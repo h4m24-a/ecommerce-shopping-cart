@@ -19,7 +19,7 @@ const ProductPage = ({carts}) => {
             {Object.keys(productData).map((category, index) => (
               <Tab
                 key={index}
-                className="uppercase font-montserrat hover:border-b border-black text-gray-900 px-4 py-2  cursor-pointer"
+                className="uppercase font-montserrat ui-selected:border-b hover:translate-y-1 border-black text-gray-900 px-4 py-2  cursor-pointer"
               >
                 {category}
               </Tab>

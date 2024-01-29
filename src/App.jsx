@@ -4,7 +4,7 @@ import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Collections from "./pages/Collections";
-import About from "./pages/About";
+
 
 import { useState } from "react";
 
@@ -41,7 +41,6 @@ function App() {
         <Route exact path="/pages/productpage" element={<ProductPage carts={carts} />} />
         <Route exact path="/pages/product/:id" element={<Product addToCart={addToCart} carts={carts} />} />
         <Route exact path="/pages/collections" element={<Collections carts={carts} />} />
-        <Route exact path="/pages/about" element={<About carts={carts} />} />
         <Route exact path="/pages/cart" element={<Cart carts={carts} handleRemove={handleRemove}/>} />
       </Routes>
     </Router>
