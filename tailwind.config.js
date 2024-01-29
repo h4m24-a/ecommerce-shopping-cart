@@ -9,7 +9,7 @@ export default {
     fontFamily: {
       poppins: ["Poppins", 'sans-serif'],
       montserrat: ['Montserrat, sans-serif'],
-      sora: ['Sora, sans-serif'],
+      sora: ['Sora, sans-serif']
     },
   },
   plugins: [
