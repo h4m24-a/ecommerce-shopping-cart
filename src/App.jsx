@@ -4,7 +4,7 @@ import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Collections from "./pages/Collections";
-
+import ErrorPage from "./pages/ErrorPage";
 
 import { useState } from "react";
 
@@ -37,11 +37,12 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<HomePage  carts={carts}/>} />
-        <Route exact path="/pages/productpage" element={<ProductPage carts={carts} />} />
-        <Route exact path="/pages/product/:id" element={<Product addToCart={addToCart} carts={carts} />} />
-        <Route exact path="/pages/collections" element={<Collections carts={carts} />} />
-        <Route exact path="/pages/cart" element={<Cart carts={carts} handleRemove={handleRemove}/>} />
+        <Route path="/" element={<HomePage  carts={carts}/>} />
+        <Route path="/pages/productpage" element={<ProductPage carts={carts} />} />
+        <Route path="/pages/product/:id" element={<Product addToCart={addToCart} carts={carts} />} />
+        <Route path="/pages/collections" element={<Collections carts={carts} />} />
+        <Route path="/pages/cart" element={<Cart carts={carts} handleRemove={handleRemove}/>} />
+        <Route path="*" element={<ErrorPage carts={carts} />} />
       </Routes>
     </Router>
   );
