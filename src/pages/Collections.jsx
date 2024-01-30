@@ -27,7 +27,7 @@ const Collections = ({ carts }) => {
 
           <img
             className="h-full cursor-pointer max-w-full transition duration-500 hover:opacity-90 mt-10"
-            src="../public/assets/collections-1.jpg"
+            src="../assets/images/collections-1.jpg"
             alt="fashion show"
           />
           <h2 className=" font-montserrat mt-10 text-md text-center text-gray-400">

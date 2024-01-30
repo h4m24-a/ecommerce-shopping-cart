@@ -17,19 +17,19 @@ const LatestCollection = () => {
       </div>
       <div className="flex mt-6 items-center justify-center gap-8   flex-col lg:flex-row">
         <Card
-          image="../assets/latest-1.jpg"
+          image="../assets/images/latest-1.jpg"
           imageStyle="object-cover w-full h-full rounded-sm cursor-pointer transition duration-500 hover:opacity-90"
           textStyle=" py-2 "
           description="White Pants"
         />
         <Card
-          image="../assets/latest-2.jpg"
+          image="../assets/images/latest-2.jpg"
           imageStyle="object-cover w-full h-full rounded-sm cursor-pointer transition duration-500 hover:opacity-90"
           textStyle=" py-2 "
           description="Blue Pants"
         />
         <Card
-          image="../assets/latest-3.jpg"
+          image="../assets/images/latest-3.jpg"
           imageStyle="object-cover w-full h-full rounded-sm cursor-pointer transition duration-500 hover:opacity-90"
           textStyle=" py-2 "
           description="Grey Pants"

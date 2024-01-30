@@ -15,7 +15,7 @@ const WideImage = () => {
     <div className='flex relative justify-center items-center flex-col'>
          <img
           className="h-full cursor-pointer  w-full"
-          src="../public/assets/fashion-people2.jpg"
+          src="../assets/images/fashion-people2.jpg"
           alt="streetwear"
         />
         <div className="absolute flex justify-end items-center flex-col">
