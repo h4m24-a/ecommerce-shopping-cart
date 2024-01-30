@@ -1,8 +1,43 @@
-# React + Vite
+# Memory Card Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### View Project : https://h4m24-a-ecommerce.netlify.app/
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A Streetwear clothing website built using:
+- Vite 
+- React
+- Tailwind
+
+
+
+## Features
+
+- Functional Shopping Cart
+- Add Items to cart
+- React Router DOM used for navigation
+- Responsive
+- Users able to select size
+- Increase quantity and see total price change in real time
+
+
+
+
+
+## Install project dependencies
+
+
+
+```
+  npm install
+```
+
+
+## Running development server
+```
+ npm run dev
+```
+
+## Building for production
+```
+ npm run build
+```
