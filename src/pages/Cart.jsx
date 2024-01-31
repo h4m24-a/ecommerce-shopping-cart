@@ -11,12 +11,10 @@ const Cart = ({ carts, handleRemove }) => {
   const [quantity, setQuantity] = useState(1);
   const [totalPrice, setTotalPrice] = useState(0)
 
-  const updateQuantity = (product, newQuantity) => {
-    setQuantity((prevQuantities) => ({
-      ...prevQuantities,
-      [product]: newQuantity,
-    }));
-  };
+ const updateQuantity = (product, newQuantity) => {
+  setQuantity(prevQuantities => ({ ...prevQuantities, [product]: newQuantity }));
+};
+
 
 
   const decreaseQuantity = (product) => {
