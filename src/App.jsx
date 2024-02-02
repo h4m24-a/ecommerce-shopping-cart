@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Collections from "./pages/Collections";
 import ErrorPage from "./pages/ErrorPage";
 
-import { useState, useContext, createContext } from "react";
+import { useState, createContext } from "react";
 
 export const ShopContext = createContext({
   carts: []
