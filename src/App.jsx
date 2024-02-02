@@ -6,7 +6,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Collections from "./pages/Collections";
 import ErrorPage from "./pages/ErrorPage";
 
-import { useState } from "react";
+import { useState, useContext, createContext } from "react";
+
+export const ShopContext = createContext({
+  carts: []
+});
 
 function App() {
   const [carts, setCarts] = useState([]);
@@ -35,16 +39,18 @@ function App() {
 
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage  carts={carts}/>} />
-        <Route path="/pages/productpage" element={<ProductPage carts={carts} />} />
-        <Route path="/pages/product/:id" element={<Product addToCart={addToCart} carts={carts} />} />
-        <Route path="/pages/collections" element={<Collections carts={carts} />} />
-        <Route path="/pages/cart" element={<Cart carts={carts} handleRemove={handleRemove}/>} />
-        <Route path="*" element={<ErrorPage carts={carts} />} />
-      </Routes>
-    </Router>
+    <ShopContext.Provider value={{ carts }}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/pages/productpage" element={<ProductPage />} />
+          <Route path="/pages/product/:id" element={<Product addToCart={addToCart} />} />
+          <Route path="/pages/collections" element={<Collections />} />
+          <Route path="/pages/cart" element={<Cart handleRemove={handleRemove}/>} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </Router>
+    </ShopContext.Provider>
   );
 }
 

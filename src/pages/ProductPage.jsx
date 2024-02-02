@@ -5,9 +5,13 @@ import { Tab } from "@headlessui/react";
 import productData from "../productData";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
+import { useContext } from "react";
+import { ShopContext } from "../App";
 
+const ProductPage = () => {
 
-const ProductPage = ({carts}) => {
+  const { carts } = useContext(ShopContext)
+
   const navigate = useNavigate();
   return (
     <div>

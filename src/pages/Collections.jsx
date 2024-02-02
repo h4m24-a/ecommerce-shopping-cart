@@ -2,8 +2,15 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import PropTypes from "prop-types";
 import { ViewfinderCircleIcon } from "@heroicons/react/24/outline";
+import { useContext } from "react";
+import { ShopContext } from "../App";
 
-const Collections = ({ carts }) => {
+
+const Collections = () => {
+
+  const { carts } = useContext(ShopContext)
+
+
   return (
     <div>
       <NavBar badge={carts.length} />

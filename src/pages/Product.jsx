@@ -8,6 +8,10 @@ import Newsletter from "../components/Newsletter";
 import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
+import { useContext } from "react";
+import { ShopContext } from "../App";
+
+
 
 const links = [
   { name: "XS" },
@@ -21,7 +25,10 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const Product = ({ addToCart, carts }) => {
+const Product = ({ addToCart }) => {
+
+  const { carts } = useContext(ShopContext)
+
   const [selected, setSelected] = useState(links[0]);
   const { id } = useParams();
 

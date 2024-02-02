@@ -5,9 +5,14 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Button from "../components/ui/Button";
+import { useContext } from "react";
+import { ShopContext } from "../App";
 
 
-const Cart = ({ carts, handleRemove }) => {
+const Cart = ({ handleRemove }) => {
+
+  const { carts } =  useContext(ShopContext)
+
   const [quantity, setQuantity] = useState(1);
   const [totalPrice, setTotalPrice] = useState(0)
 

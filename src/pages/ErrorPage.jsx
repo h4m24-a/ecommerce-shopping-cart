@@ -3,8 +3,15 @@ import Footer from "../components/Footer";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/ui/Button";
+import { useContext } from "react";
+import { ShopContext } from "../App";
 
-const ErrorPage = ({ carts }) => {
+
+const ErrorPage = () => {
+
+
+  const { carts } = useContext(ShopContext)
+
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
