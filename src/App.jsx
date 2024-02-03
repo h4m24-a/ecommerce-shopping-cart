@@ -9,7 +9,9 @@ import ErrorPage from "./pages/ErrorPage";
 import { useState, createContext } from "react";
 
 export const ShopContext = createContext({
-  carts: []
+  carts: [],
+  addToCart: () => {},
+  handleRemove: () => {}
 });
 
 function App() {
@@ -39,14 +41,14 @@ function App() {
 
 
   return (
-    <ShopContext.Provider value={{ carts }}>
+    <ShopContext.Provider value={{ carts, addToCart, handleRemove }}>
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/pages/productpage" element={<ProductPage />} />
-          <Route path="/pages/product/:id" element={<Product addToCart={addToCart} />} />
+          <Route path="/pages/product/:id" element={<Product />} />
           <Route path="/pages/collections" element={<Collections />} />
-          <Route path="/pages/cart" element={<Cart handleRemove={handleRemove}/>} />
+          <Route path="/pages/cart" element={<Cart />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>

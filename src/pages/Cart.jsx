@@ -9,12 +9,13 @@ import { useContext } from "react";
 import { ShopContext } from "../App";
 
 
-const Cart = ({ handleRemove }) => {
-
-  const { carts } =  useContext(ShopContext)
-
+const Cart = () => {
+  const { carts, handleRemove } =  useContext(ShopContext)
   const [quantity, setQuantity] = useState(1);
   const [totalPrice, setTotalPrice] = useState(0)
+
+
+
 
  const updateQuantity = (product, newQuantity) => {
   setQuantity(prevQuantities => ({ ...prevQuantities, [product]: newQuantity }));
@@ -29,7 +30,6 @@ const Cart = ({ handleRemove }) => {
   const increaseQuantity = (product) => {
     updateQuantity(product, (quantity[product] || 0) + 1);
   };
-
 
 
 

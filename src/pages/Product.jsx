@@ -25,21 +25,27 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const Product = ({ addToCart }) => {
-
-  const { carts } = useContext(ShopContext)
-
-  const [selected, setSelected] = useState(links[0]);
+const Product = () => {
   const { id } = useParams();
+  const [selected, setSelected] = useState(links[0]);
+  const { carts, addToCart } = useContext(ShopContext)
+
+
 
   const handleAddToCart = () => {
     addToCart({ ...product, size: selected.name });   // product represents the product you want to add to the cart,  includes id, image, name, description, and price.
   };
 
+
+
+
   // Find the product with the given id in all categories
   const product = Object.values(productData).flat().find((product) => product.id.toString() === id);
 
   const { image, name, description, price } = product;
+
+
+
 
   return (
     <>
