@@ -1,17 +1,16 @@
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-import { useParams } from "react-router-dom";
-import productData from "../productData";
-import Button from "../components/ui/Button";
 import PropTypes from "prop-types";
-import Newsletter from "../components/Newsletter";
+import { useParams } from "react-router-dom";
 import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 import { useContext } from "react";
 import { ShopContext } from "../App";
-
-
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import productData from "../productData";
+import Button from "../components/ui/Button";
+import Newsletter from "../components/Newsletter";
+import Modal from "../components/ui/Modal";
 
 const links = [
   { name: "XS" },
@@ -28,24 +27,20 @@ function classNames(...classes) {
 const Product = () => {
   const { id } = useParams();
   const [selected, setSelected] = useState(links[0]);
-  const { carts, addToCart } = useContext(ShopContext)
-
-
+  const [showModal, setShowModal] = useState(false);
+  const { carts, addToCart } = useContext(ShopContext);
 
   const handleAddToCart = () => {
-    addToCart({ ...product, size: selected.name });   // product represents the product you want to add to the cart,  includes id, image, name, description, and price.
+    addToCart({ ...product, size: selected.name }); // product represents the product you want to add to the cart,  includes id, image, name, description, and price.
+    setShowModal(true);
   };
 
-
-
-
   // Find the product with the given id in all categories
-  const product = Object.values(productData).flat().find((product) => product.id.toString() === id);
+  const product = Object.values(productData)
+    .flat()
+    .find((product) => product.id.toString() === id);
 
   const { image, name, description, price } = product;
-
-
-
 
   return (
     <>
@@ -62,9 +57,13 @@ const Product = () => {
               <p className="text-3xl font-montserrat mt-4 lg:mt-0 font-bold">
                 {name}
               </p>
-              <p className="text-xl mt-8 font-montserrat border-b border-black py-2">${price}</p>
-              <p className="text-xs text-gray-500 mt-8 font-montserrat">{description}</p>
-              
+              <p className="text-xl mt-8 font-montserrat border-b border-black py-2">
+                ${price}
+              </p>
+              <p className="text-xs text-gray-500 mt-8 font-montserrat">
+                {description}
+              </p>
+
               <Listbox value={selected} onChange={setSelected}>
                 {({ open }) => (
                   <>
@@ -94,9 +93,9 @@ const Product = () => {
                         leaveTo="opacity-0"
                       >
                         <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                          {links.map((link) => (
+                          {links.map((link, index) => (
                             <Listbox.Option
-                              key={link.id}
+                              key={index}
                               className={({ active }) =>
                                 classNames(
                                   active
@@ -153,7 +152,10 @@ const Product = () => {
                 btnClass="bg-black mt-8 font-montserrat uppercase m-2 mb-6 text-sm text-white rounded-md px-8 py-4  transition duration-300 ease-in-out active:bg-red-500 focus:outline-none hover:bg-gray-900"
                 onClick={() => handleAddToCart(selected.name)}
               ></Button>
-              <div className="flex flex-col justify-center items-center cursor-pointer gap-3 lg:items-stretch">
+
+              {showModal && <Modal onClose={() => setShowModal(false)} />}
+
+              <div className="flex flex-col mt-4 justify-center items-center cursor-pointer gap-3 lg:items-stretch">
                 <p className="text-xs font-montserrat text-black hover:font-bold">
                   Check In-Store Availability
                 </p>

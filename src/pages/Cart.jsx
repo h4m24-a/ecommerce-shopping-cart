@@ -7,9 +7,10 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import Button from "../components/ui/Button";
 import { useContext } from "react";
 import { ShopContext } from "../App";
-
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
+  const navigate = useNavigate();
   const { carts, handleRemove } =  useContext(ShopContext)
   const [quantity, setQuantity] = useState(1);
   const [totalPrice, setTotalPrice] = useState(0)
@@ -48,13 +49,17 @@ const Cart = () => {
     alert("Thank you for your order!");
   };
 
+  
 
+  const goBack = () => {
+    navigate(-2)
+  };
   
   return (
     <>
       <NavBar badge={carts.length} />
 
-      <h1 className="text-3xl text-center font-poppins font-bold mb-4">
+      <h1 className="text-3xl mt-5 text-center font-poppins font-bold mb-4 lg:mt-0">
         Your Cart
       </h1>
       <div className="container mb-56 max-w-7xl mt-5 mx-auto flex-col flex  p-4 lg:flex-row lg:gap-20">
@@ -111,6 +116,11 @@ const Cart = () => {
               <span className="font-bold ml-2 tracking-widest">${totalPrice}</span>
             </p>
             <Button
+             btnClass="text-white w-full uppercase font-poppins bg-gray-950 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium text-sm px-5 py-2.5"
+             text="Keep Shopping"
+             onClick={goBack}
+           />
+            <Button
               btnClass="text-white w-full uppercase font-poppins bg-gray-950 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium text-sm px-5 py-2.5"
               text="Checkout"
               onClick={handleCheckout}
@@ -125,7 +135,7 @@ const Cart = () => {
 };
 
 Cart.propTypes = {
-  carts: PropTypes.array.isRequired,
+  carts: PropTypes.array,
   totalPrice: PropTypes.number,
   handleRemove: PropTypes.func
 };
