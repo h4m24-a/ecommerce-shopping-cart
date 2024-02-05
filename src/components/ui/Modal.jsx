@@ -7,7 +7,7 @@ const Modal = () => {
   const handleButtonClick = () => {
     navigate("/pages/cart")
     // Scroll to the top of the page
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo(0, 0);
   };
   
   return (

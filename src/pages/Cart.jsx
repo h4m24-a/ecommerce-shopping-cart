@@ -52,7 +52,8 @@ const Cart = () => {
   
 
   const goBack = () => {
-    navigate(-2)
+    navigate("/pages/productpage")
+    window.scrollTo(0, 0);
   };
   
   return (
